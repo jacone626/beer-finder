@@ -1,1 +1,1 @@
-Hello Weed lovers
+Weed lovers
