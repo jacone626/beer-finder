@@ -15,10 +15,14 @@ Review.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    weed_id: {
+    emoji_starRating: {
+      type: DataTypes.FLOAT,
+      allowNull: false,
+    },
+    cannabisIndex_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: "weed",
+        model: "CannabisIndex",
         key: "id"
       }
     },

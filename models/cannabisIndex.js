@@ -15,20 +15,12 @@ CannabisIndex.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    // description: {
-    //   type: DataTypes.STRING,
-    // },
-    review: {
-      type: DataTypes.DATE,
-      allowNull: false,
-      defaultValue: DataTypes.NOW,
+    description: {
+      type: DataTypes.STRING,
     },
-    emoji_starRating: {
-      type: DataTypes.FLOAT,
-      allowNull: false,
-    },
+   
     strain: {
-      type: DataTypes.String,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     user_id: {
