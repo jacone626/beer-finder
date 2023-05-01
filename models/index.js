@@ -1,7 +1,8 @@
 const User = require('./User');
-const Project = require('./weed');
+const CannabisIndex = require('./weed');
 
-User.hasMany(Project, {
+
+User.hasMany(CannabisIndex, {
   foreignKey: 'user_id',
   onDelete: 'CASCADE'
 });
@@ -10,4 +11,5 @@ Project.belongsTo(User, {
   foreignKey: 'user_id'
 });
 
-module.exports = { User, Project };
+module.exports = { User, CannabisIndex };
+

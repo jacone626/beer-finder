@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Project extends Model {}
+class CannabisIndex extends Model {}
 
-Project.init(
+CannabisIndex.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -15,16 +15,20 @@ Project.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    description: {
-      type: DataTypes.STRING,
-    },
-    date_created: {
+    // description: {
+    //   type: DataTypes.STRING,
+    // },
+    review: {
       type: DataTypes.DATE,
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
-    needed_funding: {
+    emoji_starRating: {
       type: DataTypes.FLOAT,
+      allowNull: false,
+    },
+    strain: {
+      type: DataTypes.String,
       allowNull: false,
     },
     user_id: {
@@ -40,8 +44,9 @@ Project.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'project',
+    modelName: 'CannabisIndex',
   }
 );
 
-module.exports = Project;
+module.exports = CannabisIndex;
+
