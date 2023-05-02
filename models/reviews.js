@@ -19,10 +19,10 @@ Review.init(
       type: DataTypes.FLOAT,
       allowNull: false,
     },
-    cannabisIndex_id: {
+    pairing_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: "CannabisIndex",
+        model: "pairing",
         key: "id"
       }
     },

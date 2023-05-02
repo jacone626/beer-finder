@@ -18,7 +18,6 @@ CannabisIndex.init(
     description: {
       type: DataTypes.STRING,
     },
-   
     strain: {
       type: DataTypes.STRING,
       allowNull: false,
