@@ -1,13 +1,13 @@
 const router = require('express').Router();
-const { Review } = require('../../models/index');
+const { Review } = require('../../models');
 const withAuth = require("../../utils/auth");
 
 //Add a review
 router.post("/", withAuth, async (req, res) => {
     try {    
       const review = await Review.create({
-        content: req.body.comment,
-        weed_id: req.body.weed_id,
+        content: req.body.content,
+        pairing_id: req.body.pairing_id,
         user_id: req.session.user_id,
       });
       res.status(200).json(review);
