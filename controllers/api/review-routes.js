@@ -7,6 +7,7 @@ router.post("/", withAuth, async (req, res) => {
     try {    
       const review = await Review.create({
         content: req.body.content,
+        emoji_starRating: req.body.emoji_starRating,
         pairing_id: req.body.pairing_id,
         user_id: req.session.user_id,
       });
