@@ -10,16 +10,28 @@ User.hasMany(Pairing, {
   onDelete: 'CASCADE'
 });
 
+User.hasMany(Review, {
+    foreignKey: 'user_id'
+});
+
+Review.belongsTo(User, {
+  foreignKey: 'user_id'
+})
+
 Pairing.belongsTo(Review, {
   foreignKey: 'pairing_id'
  })
 
- 
 CannabisIndex.belongsToMany(Activity, {
-  through: {model: Pairing, unique: true}})
+  through: {model: Pairing, unique: true},
+  as: 'cannabis_activity'
+})
 
 Activity.belongsToMany(CannabisIndex, {
-  through: {model: Pairing, unique: true}})
+  through: {model: Pairing, unique: true},
+  as: "activity_cannabis"
+})
+
 
 
 
