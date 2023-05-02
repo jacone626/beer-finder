@@ -7,7 +7,7 @@ const { Activity } = require('../../models');
 //Get
 router.get("/", async (req, res) => {
     try {
-    const activityData = await Activity.findAll({
+        const activityData = await Activity.findAll({
     });
     res.status(200).json(activityData);
     } catch (err) {
@@ -19,16 +19,6 @@ router.get("/", async (req, res) => {
 router.get("/:id", async (req, res) => {
     try {
       const activityData = await Post.findByPk(req.params.id, {
-        include: [{ 
-            model: Activity, 
-            attributes: ["username"] },
-          {
-            model: Comment,
-            include: { 
-                model: User, 
-                attributes: ["username"] }
-          },
-        ],
       });
       if (!activityData) {
         res.status(404).json({ message: "No activity found with that id!" });
@@ -41,8 +31,8 @@ router.get("/:id", async (req, res) => {
   });
 
 
-//Add a review
-router.post("/", withAuth, async (req, res) => {
+//Add an activity
+router.post("/", async (req, res) => {
     try {    
       const review = await Review.create({
         content: req.body.content,
@@ -55,3 +45,5 @@ router.post("/", withAuth, async (req, res) => {
       res.status(400).json(err);
     }
   });
+
+  module.exports = router;

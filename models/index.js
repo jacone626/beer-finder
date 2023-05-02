@@ -17,7 +17,7 @@ Pairing.belongsTo(Review, {
   foreignKey: 'pairing_id'
  });
 
- Review.hasOne(Pairing, {
+Review.hasOne(Pairing, {
   foreignKey: 'pairing_id'
  })
 
