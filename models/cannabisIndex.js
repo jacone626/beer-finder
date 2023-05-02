@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class CannabisIndex extends Model {}
+class CannabisIndex extends Model { }
 
 CannabisIndex.init(
   {
@@ -22,11 +22,22 @@ CannabisIndex.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    user_id: {
+    Image: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    activity_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'user',
+        model: 'activity',
         key: 'id',
+      },
+      user_id: {
+        type: DataTypes.INTEGER,
+        references: {
+          model: 'user',
+          key: 'id',
+        },
       },
     },
   },
