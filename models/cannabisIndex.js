@@ -22,23 +22,9 @@ CannabisIndex.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    Image: {
+    image: {
       type: DataTypes.STRING,
       allowNull: false,
-    },
-    activity_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'activity',
-        key: 'id',
-      },
-      user_id: {
-        type: DataTypes.INTEGER,
-        references: {
-          model: 'user',
-          key: 'id',
-        },
-      },
     },
   },
   {

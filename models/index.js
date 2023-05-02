@@ -5,34 +5,29 @@ const Pairing = require('./pairing');
 const Review =require('./reviews')
 
 
-User.hasMany(Pairing, {
-  foreignKey: 'user_id',
-  onDelete: 'CASCADE'
-});
-
 User.hasMany(Review, {
     foreignKey: 'user_id'
 });
 
 Review.belongsTo(User, {
   foreignKey: 'user_id'
-})
+});
 
 Pairing.belongsTo(Review, {
+  foreignKey: 'pairing_id'
+ });
+
+ Review.hasOne(Pairing, {
   foreignKey: 'pairing_id'
  })
 
 CannabisIndex.belongsToMany(Activity, {
-  through: {model: Pairing, unique: true},
-  as: 'cannabis_activity'
-})
+  through: {model: Pairing, unique: true}
+});
 
 Activity.belongsToMany(CannabisIndex, {
-  through: {model: Pairing, unique: true},
-  as: "activity_cannabis"
-})
-
-
+  through: {model: Pairing, unique: true}
+});
 
 
 module.exports = { User, CannabisIndex, Activity, Pairing, Review };
