@@ -1,0 +1,20 @@
+[
+  {
+    "content": "I enjoyed this pairing.",
+    "emoji_starRating": 4.0,
+    "pairing_id": 2,
+    "user_id": 1
+  },
+  {
+    "content": "I did not enjoy this pairing.",
+    "emoji_starRating": 2.0,
+    "pairing_id": 3,
+    "user_id": 2
+  },
+  {
+    "content": "I do not recommend smoking this with your parents.",
+    "emoji_starRating": 1.0,
+    "pairing_id": 4,
+    "user_id": 1
+  }
+]

@@ -13,13 +13,16 @@ Review.belongsTo(User, {
   foreignKey: 'user_id'
 });
 
-Pairing.belongsTo(Review, {
+
+Review.belongsTo(Pairing, {
   foreignKey: 'pairing_id'
  });
 
-Review.hasOne(Pairing, {
+Pairing.hasMany(Review, {
   foreignKey: 'pairing_id'
  })
+
+
 
 CannabisIndex.belongsToMany(Activity, {
   through: {model: Pairing, unique: true}
