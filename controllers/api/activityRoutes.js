@@ -18,7 +18,7 @@ router.get("/", async (req, res) => {
 //Find a specific activity
 router.get("/:id", async (req, res) => {
     try {
-      const activityData = await Post.findByPk(req.params.id, {
+      const activityData = await Activity.findByPk(req.params.id, {
       });
       if (!activityData) {
         res.status(404).json({ message: "No activity found with that id!" });
@@ -34,11 +34,8 @@ router.get("/:id", async (req, res) => {
 //Add an activity
 router.post("/", async (req, res) => {
     try {    
-      const review = await Review.create({
-        content: req.body.content,
-        emoji_starRating: req.body.emoji_starRating,
-        pairing_id: req.body.pairing_id,
-        user_id: req.session.user_id,
+      const review = await Activity.create({
+        name: req.body.name,
       });
       res.status(200).json(review);
     } catch (err) {

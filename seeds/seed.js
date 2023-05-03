@@ -1,22 +1,23 @@
 const sequelize = require('../config/connection');
-// const { User, //Activity, CannabisIndex, Reviews// } = require('../models');
-const { User, } = require('../models');
+const { User, Activity, CannabisIndex, Review, Pairing } = require('../models');
 const userData = require('./userData.json');
 const activityData = require('./activityData.json');
-// const reviewsData= require('./revi')
+const reviewsData= require('./reviews.json')
+const pairingData = require('./pairingData.json')
+const cannabisData = require('./cannabisIndexData.json')
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
-  const users = await User.bulkCreate(userData, {
-    individualHooks: true,
-    returning: true,
-  });
+  await User.bulkCreate(userData);
 
-  // await Activity.bulkCreate(activityData.map(activity => ({
-  //   ...activity,
-  //   user_id: users[Math.floor(Math.random() * users.length)].id,
-  // })));
+  await Activity.bulkCreate(activityData);
+
+  await CannabisIndex.bulkCreate(cannabisData);
+
+  await Pairing.bulkCreate(pairingData);
+
+  await Review.bulkCreate(reviewsData);
 
   process.exit(0);
 };
