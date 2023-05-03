@@ -1,8 +1,43 @@
 [
     {
+      "activity_id": 1,
+      "cannabisIndex_id": 1
+    },
+    {
       "activity_id": 2,
-      "cannabisIndex_id": 1,
-      "user_id": 1
+      "cannabisIndex_id": 5
+    },
+    {
+      "activity_id": 3,
+      "cannabisIndex_id": 3
+    },
+    {
+      "activity_id": 4,
+      "cannabisIndex_id": 6
+    },
+    {
+      "activity_id": 5,
+      "cannabisIndex_id": 7
+    },
+    {
+      "activity_id": 6,
+      "cannabisIndex_id": 10
+    },
+    {
+      "activity_id": 7,
+      "cannabisIndex_id": 12
+    },
+    {
+      "activity_id": 8,
+      "cannabisIndex_id": 13
+    },
+    {
+      "activity_id": 9,
+      "cannabisIndex_id": 14
+    },
+    {
+      "activity_id": 10,
+      "cannabisIndex_id": 17
     }
 
 ]
