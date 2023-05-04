@@ -1,40 +1,49 @@
 <header>
     <section class="hero is-success ">
         <div class="hero-body">
-            <p class="title has-text-centered ">Find my Weed</p>
-            <p class=" has-text-left">Welcome!</p>
+            <p class="title has-text-centered " id="homepageTitle">Find my Weed</p>
 
 
-            <div class="dropdown is-hoverable">
+
+            <div class="dropdown is-hoverable" id="dropdown">
                 <div class="dropdown-trigger">
-                    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
-                        <span>Hover me</span>
-                        <span class="icon is-small">
-                            <i class="fas fa-angle-down" aria-hidden="true"></i>
-                        </span>
+                    <button class="button is-primary" aria-haspopup="true" aria-controls="dropdown-menu4">
+                        <p>Menu</p>
+
+
+
                     </button>
                 </div>
                 <div class="dropdown-menu" id="dropdown-menu4" role="menu">
                     <div class="dropdown-content">
                         <div class="dropdown-item">
-                            <p>You can insert <strong>any type of content</strong> within the dropdown menu.</p>
+                            <div class="buttons is-centered">
+                                <button class="button is-primary is-rounded ">Logout</button>
+                                <hr class="dropdown-divider">
+                                <button class="button is-primary is-rounded">Homepage</button>
+                                <button class="button is-primary is-rounded"> Find an Activity</button>
+                                <button class="button is-primary is-rounded">Explore a Strain</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
     </section>
 </header>
 
 
-<body>
+<body id="body">
     <section class="container is-fluid" id="recentReviews">
         <div>
             <h1 class="has-text-centered">Most Recent Reviews</h1>
             <div>
-                {{!-- <p>{{FUTURE MOST RECENT REVIEW}}</p> --}}
-            </div>
-        </div>
+              {{#each pairing as |pairing|}}
+  <script>console.log({{pairing}})</script>
+  {{#each pairing.reviews as |review|}}
+    <script>console.log({{review}})</script>
+    {{> review-details review=review}}
+  {{/each}}
+{{/each}}
     </section>
 
     <section class="container is-fluid" id="usersActivities">
