@@ -13,16 +13,13 @@ Review.belongsTo(User, {
   foreignKey: 'user_id'
 });
 
-
-Review.belongsTo(Pairing, {
+Pairing.hasMany(Review, {
   foreignKey: 'pairing_id'
  });
 
-Pairing.hasMany(Review, {
+ Review.belongsTo(Pairing, {
   foreignKey: 'pairing_id'
- })
-
-
+ });
 
 CannabisIndex.belongsToMany(Activity, {
   through: {model: Pairing, unique: true}
@@ -34,4 +31,3 @@ Activity.belongsToMany(CannabisIndex, {
 
 
 module.exports = { User, CannabisIndex, Activity, Pairing, Review };
-

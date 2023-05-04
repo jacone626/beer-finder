@@ -1,9 +1,9 @@
 //get route, get by id route, and create route
 const router = require('express').Router();
-const { Pairing, Activity, CannabisIndex} = require('../../models');
+const { Pairing, Review, User} = require('../../models');
 // const withAuth = require("../../utils/auth");
 
-  
+
 //Get
 router.get("/", async (req, res) => {
     try {
@@ -19,13 +19,13 @@ router.get("/", async (req, res) => {
 router.get("/:id", async (req, res) => {
     try {
       const activityData = await Pairing.findByPk(req.params.id, {
-        // include: [{ 
-        //     model: Activity, 
-        //     attributes: ["name"] },
-        //   {
-        //     model: CannabisIndex,
-        //     attributes: ["name"] },
-        // ],
+        include: [{
+            model: Review,
+            include: { 
+              model: User, 
+              attributes: ["name"] }
+        },
+      ],
       });
       if (!activityData) {
         res.status(404).json({ message: "No pairing found with that id!" });
@@ -37,7 +37,7 @@ router.get("/:id", async (req, res) => {
     }
   });
 
-//Add a pairing
+//Add a pairing (Future Dev)
 router.post("/", async (req, res) => {
     try {    
       const review = await Pairing.create({
@@ -49,4 +49,5 @@ router.post("/", async (req, res) => {
       res.status(400).json(err);
     }
   });
+
 module.exports = router;

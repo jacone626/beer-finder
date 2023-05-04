@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Review } = require('../../models');
+const { Review, User, Pairing, Activity, CannabisIndex } = require('../../models');
 const withAuth = require("../../utils/auth");
 
 //Add a review
@@ -21,18 +21,43 @@ router.post("/", withAuth, async (req, res) => {
   router.get("/", async (req, res) => {
       try {
         const reviewData = await Review.findAll({
+          include: [{ 
+            model: User, 
+            attributes: ["name"] },
+          ]
       });
         res.status(200).json(reviewData);
       } catch (err) {
         res.status(500).json(err);
       }
     });
+
+//Find a specific review
+router.get("/:id", async (req, res) => {
+  try {
+    const reviewData = await Review.findByPk(req.params.id, {
+      include: [{ 
+        model: User, 
+        attributes: ["name"] },
+      ]
+    });
+    if (!reviewData) {
+      res.status(404).json({ message: "No review found with that id!" });
+      return;
+    }
+    res.status(200).json(reviewData);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
   
 //Delete a review
   router.delete("/:id", withAuth, async (req, res) => {
       try {
         const deleteReview = await Review.destroy({
-          where: { id: req.params.id },
+          where: { 
+            id: req.params.id, 
+            user_id: req.session.user_id,},
         });
     
         if (!deleteReview) {
