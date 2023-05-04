@@ -1,0 +1,53 @@
+
+=======
+body {
+    background-color: rgba(250, 245, 245, 0.719);
+}
+
+#homepageTitle{
+    font-size: 80px;
+}
+
+#dropdown{
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    font-size: 18px;
+}
+
+h1{
+    font-size:  36px;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+}
+
+
+#email-login{
+    font-size: 36px;
+    border-radius: 30px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    text-align: center;
+    margin: 20px;
+}
+
+#password-login{
+    font-size: 36px;
+    border-radius: 30px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    text-align: center;
+    margin: 20px;
+}
+
+#login-submit{
+    font-size: 36px;
+    border-radius: 15px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    text-align: center;
+    margin: 20px;
+}
+
+.login-container {
+    margin: 0 auto;
+    width: 50%;
+}
+
