@@ -6,7 +6,12 @@
 },
 {
     "name": "Bill Pepper",
-    "email": "Billp@yahoo.com",
+    "email": "Bill@yahoo.com",
     "password": "Pepper11"
+},
+{
+    "name": "Jimmy Buffett",
+    "email": "cheeseburger@yahoo.com",
+    "password": "margarita"
 }
 ]

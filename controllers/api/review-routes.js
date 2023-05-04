@@ -36,10 +36,21 @@ router.post("/", withAuth, async (req, res) => {
 router.get("/:id", async (req, res) => {
   try {
     const reviewData = await Review.findByPk(req.params.id, {
-      include: [{ 
-        model: User, 
-        attributes: ["name"] },
-      ]
+      include: [{
+        all: true,
+        nested: true,
+      }]
+     
+      // include: [{ 
+      //   model: User, 
+      //   attributes: ["name"] },
+      //   {model: Pairing,
+      //     include: [  
+      //     {model: Activity},
+      //     {model: CannabisIndex}
+      //     ]
+      //     }
+      // ]
     });
     if (!reviewData) {
       res.status(404).json({ message: "No review found with that id!" });

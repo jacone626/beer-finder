@@ -16,5 +16,17 @@
     "emoji_starRating": 1.0,
     "pairing_id": 4,
     "user_id": 1
+  },
+  {
+    "content": "I took great pictures and it helped me focus on finer details!",
+    "emoji_starRating": 4.0,
+    "pairing_id": 24,
+    "user_id": 2
+  },
+  {
+    "content": "I did not catch any fish and I'm blaming this strain.",
+    "emoji_starRating": 1.0,
+    "pairing_id": 37,
+    "user_id": 3
   }
 ]

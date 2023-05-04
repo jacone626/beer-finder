@@ -8,6 +8,10 @@ const { Pairing, Review, User} = require('../../models');
 router.get("/", async (req, res) => {
     try {
     const pairingData = await Pairing.findAll({
+      include: [{
+        all: true,
+        nested: true,
+      }]
     });
     res.status(200).json(pairingData);
     } catch (err) {
