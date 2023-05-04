@@ -4,118 +4,118 @@
     "name": "Chem De La Chem #5",
     "description": "TBD",
     "strain": "Indica",
-    "image": "assests/ChemDeLaChemNo5_INDICA.jpg"
+    "image": "assets/ChemDeLaChemNo5_INDICA.jpg"
   },
   {
     "id": 2,
     "name": "Double Afghan Chunk #24",
     "description": "TBD",
     "strain": "Indica",
-    "image":"assests/DoubleAfghanChunk24_INDICA.jpg"
+    "image":"assets/DoubleAfghanChunk24_INDICA.jpg"
   },
   {
     "id": 3,
     "name": "Florthern Lights Haze #11",
     "description": "TBD",
     "strain": "Hybrid",
-    "image":"assests/FlorthernLightsHazeNo11_Hybrid.jpg"
+    "image":"assets/FlorthernLightsHazeNo11_Hybrid.jpg"
   },
   {
     "id": 4,
     "name": "Hogplums Haze #30",
     "description": "TBD",
     "strain": "Hybrid",
-    "image":"assests/HogplumsHazeNo30_Hybrid.jpg"
+    "image":"assets/HogplumsHazeNo30_Hybrid.jpg"
   },
   {
     "id": 5,
     "name": "Kaliburst #31",
     "description": "TBD",
     "strain": "Hybrid",
-    "image":"assests/KaliburstNo31_HYBRID.jpeg"
+    "image":"assets/KaliburstNo31_HYBRID.jpeg"
   },
   {
     "id": 6,
     "name": "LA Biker #2",
     "description": "TBD",
     "strain": "Indica",
-    "image":"assests/LABikerNo2_Indica.png"
+    "image":"assets/LABikerNo2_Indica.png"
   },
   {
     "id": 7,
     "name": "Legend of 91 #9",
     "description": "TBD",
     "strain": "Indica",
-    "image":"assests/LegendOf91No9_INDICA.jpg"
+    "image":"assets/LegendOf91No9_INDICA.jpg"
   },
   {
     "id": 8,
     "name": "Londyn Lei #4",
     "description": "TBD",
     "strain": "Hybrid",
-    "image":"assests/LondynLeiNo4_HYBRID.png"
+    "image":"assets/LondynLeiNo4_HYBRID.png"
   },
   {
     "id": 9,
     "name": "Londyn Lei #50",
     "description": "TBD",
     "strain": "Hybrid",
-    "image":"assests/LondynLeiNo50_hybrid.jpg"
+    "image":"assets/LondynLeiNo50_hybrid.jpg"
   },
   {
     "id": 10,
     "name": "Marie Laveau #42",
     "description": "TBD",
     "strain": "Indica",
-    "image":"assests/MarieLaveauNo42.png"
+    "image":"assets/MarieLaveauNo42.png"
   },
   {
     "id": 11,
     "name": "Orange Slice Nebula #41",
     "description": "TBD",
     "strain": "Hybrid",
-    "image":"assests/OrangeSliceNebulaNo41_HYBRID.jpeg"
+    "image":"assets/OrangeSliceNebulaNo41_HYBRID.jpeg"
   },
   {
     "id": 12,
     "name": "PT Stardawg #36",
     "description": "TBD",
     "strain": "Indica",
-    "image":"assests/PTStardawgNo36_INDICA.jpg"
+    "image":"assets/PTStardawgNo36_INDICA.jpg"
   },
   {
     "id": 13,
     "name": "Purple Thai #22",
     "description": "TBD",
     "strain": "Sativa",
-    "image":"assests/PTStardawgNo36_INDICA.jpg"
+    "image":"assets/PTStardawgNo36_INDICA.jpg"
   },
   {
     "id": 14,
     "name": "Scarlet-Nova #33",
     "description": "TBD",
     "strain": "Hybrid",
-    "image":"assests/Scarlet-NovaNo33_HYBRID.jpeg"
+    "image":"assets/Scarlet-NovaNo33_HYBRID.jpeg"
   },
   {
     "id": 15,
     "name": "Super Silver Thai #5",
     "description": "TBD",
     "strain": "Sativa",
-    "image":"assests/SuperSilverThaiNo5_SATIVA.jpg"
+    "image":"assets/SuperSilverThaiNo5_SATIVA.jpg"
   },
   {
     "id": 16,
     "name": "Super Silver Thai #17",
     "description": "TBD",
     "strain": "Sativa",
-    "image":"assests/SuperSilverThaiNo17_SATIVA.jpeg"
+    "image":"assets/SuperSilverThaiNo17_SATIVA.jpeg"
   },
   {
     "id": 17,
     "name": "Urban Legend #48",
     "description": "TBD",
     "strain": "Indica",
-    "image":"assests/UrbanLegendNo48_INDICA.jpg"
+    "image":"assets/UrbanLegendNo48_INDICA.jpg"
   }
 ]
