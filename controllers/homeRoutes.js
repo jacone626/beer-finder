@@ -103,3 +103,16 @@ catch (err){
 }
 })
 module.exports = router;
+
+
+
+router.get('/strain/:strainName', async (req, res) => {
+  try {
+   res.render('findStrain', {
+    // users,
+    // logged_in: req.session.logged_in
+   });
+  } catch (err) {
+   res.status(500).json(err);
+  }
+ });
