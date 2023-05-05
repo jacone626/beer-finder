@@ -9,7 +9,7 @@ const pairing = [
     name: "Chem De La Chem #5",
     description: "TBD",
     strain: "Indica",
-    image: "assests/ChemDeLaChemNo5_INDICA.jpg"
+    image: "assets/ChemDeLaChemNo5_INDICA.jpg"
     },
 
     activity: {
@@ -27,13 +27,29 @@ const pairing = [
     name: "Double Afghan Chunk #24",
     description: "TBD",
     strain: "Indica",
-    image:"assests/DoubleAfghanChunk24_INDICA.jpg"
+    image:"assets/DoubleAfghanChunk24_INDICA.jpg"
     },
 
     activity: {
       id: 2,
       name: "Snowboarding",
       emoji: "🏂"
+    }
+  },
+
+  {
+    cannabis: {
+      "id": 10,
+    "name": "Marie Laveau #42",
+    "description": "TBD",
+    "strain": "Indica",
+    "image":"assets/MarieLaveauNo42.png"
+    },
+
+    activity: {
+      "id": 4,
+      "name": "Photography",
+      "emoji": "📷"
     }
   }
 ]
@@ -43,33 +59,27 @@ const pairing = [
 
 router.get('/', async (req, res) => {
   try {
-    // Get all projects and JOIN with user data
-    // const userData = await User.findAll({
-    //   include: [
-    //     {
-    //       model: User,
-    //       attributes: ['name'],
-    //     },
-    //   ],
-    // });
-
-    // // Serialize data so the template can read it
-    // const users = userData.map((user) => user.get({ plain: true }));
-
-    // Pass serialized data and session flag into template
+    // if (req.session.logged_in) {
+    //   res.redirect('/');
+    //   return;
+    // }
+  
+    // res.render('login');
+    
     res.render('homepage', {pairing
       // users, 
       // logged_in: req.session.logged_in 
     });
   } catch (err) {
     res.status(500).json(err);
+
   }
 });
 
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
-    res.redirect('/homepage');
+    res.redirect('/');
     return;
   }
 
@@ -86,28 +96,20 @@ router.get('/logout'), (req, res) => {
 })};
 
 
-router.get('/homepage', async (req, res) => {
-  try {
-  // const userData = await user.findAll({
-  //   include: [{
-  //     model: User,
-  //     attributes: ["name"],
-  //   },
-  // ],
-  // });
-  
-  res.render('homepage')
-}
-catch (err){
-  res.status(500).json(err)
-}
-})
+
 module.exports = router;
 
 
 
 router.get('/strain/:strainName', async (req, res) => {
   try {
+    // if (req.session.logged_in) {
+    //   res.redirect('/strain/:strainName');
+    //   return;
+    // }
+  
+    // res.render('login');
+
    res.render('findStrain', {
     // users,
     // logged_in: req.session.logged_in

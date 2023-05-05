@@ -18,7 +18,7 @@
                     <div class="dropdown-content">
                         <div class="dropdown-item">
                             <div class="buttons is-centered">
-                                <button class="button is-primary is-rounded ">Logout</button>
+                                <button id="logout" class="button is-primary is-rounded ">Logout</button>
                                 <hr class="dropdown-divider">
                                 <button class="button is-primary is-rounded">Homepage</button>
                                 <button class="button is-primary is-rounded"> Find an Activity</button>
@@ -34,24 +34,37 @@
 
 <body id="body">
     <section class="container is-fluid" id="recentReviews">
-        <div>
+        <div class="">
             <h1 class="has-text-centered">Most Recent Reviews</h1>
-            <img src="{{pairing.cannabis.image}}" alt="none"/>
-            <div>
             {{#each pairing as |pairing|}}
-            <img src="/..assets/{{pairing.cannabis.[0].image}}" alt="">
-            {{pairing.activity.image}}
-  {{#each pairing.reviews as |review|}}
-   
-    {{!-- {{> review-details review=review}} --}}
-  {{/each}}
-{{/each}}
-    </section>
 
-    <section class="container is-fluid" id="usersActivities">
-        <h1 class="has-text-centered">My User Activities</h1>
-        <div>
-            {{!-- <p>{{FUTURE USER ACTIVITIES}}</p> --}}
-        </div>
-    </section>
+
+
+            <section class="section mb-5 mt-0 pt-0 startpage ">
+                <div class="container has-text-centered">
+                    <div class="row" id="columns-container">
+                        <div class="row is-one-third" id="data-card-row">
+                            <h1 class="is-size-1 title" id="left-box-title"></h1>
+                            <div class="card">
+                                <h2><strong><span id="symbol"></span></strong></h2>
+                                <div class="card-content">
+                                    <div class="content" id="coin-data">
+                                        <img src="{{pairing.cannabis.image}}" alt="" />
+                                        <h2>{{pairing.cannabis.name}}</h2>
+                                        <p>{{pairing.cannabis.strain}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+{{/each}}
+            <section class="container is-fluid" id="usersActivities">
+                <h1 class="has-text-centered">My User Activities</h1>
+                <div>
+                    {{!-- <p>{{FUTURE USER ACTIVITIES}}</p> --}}
+                </div>
+            </section>
 </body>
