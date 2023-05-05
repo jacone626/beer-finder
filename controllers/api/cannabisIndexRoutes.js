@@ -17,7 +17,7 @@ router.get('/', async (req, res) => {
 router.get("/:id", async (req, res) => {
     try {
       const cannabisData = await CannabisIndex.findByPk(req.params.id, {
-        include: [{ model: Activity, through: Pairing}]
+        include: [{ model: Activity, through: Pairing}],
       });
       if (!cannabisData) {
         res.status(404).json({ message: "No cannabis found with that id!" });

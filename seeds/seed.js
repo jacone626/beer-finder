@@ -9,11 +9,13 @@ const cannabisData = require('./cannabisIndexData.json')
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
-  await User.bulkCreate(userData);
-
-  await Activity.bulkCreate(activityData);
+  await User.bulkCreate(userData,{
+    individualHooks: true,
+  });
 
   await CannabisIndex.bulkCreate(cannabisData);
+
+  await Activity.bulkCreate(activityData);
 
   await Pairing.bulkCreate(pairingData);
 
