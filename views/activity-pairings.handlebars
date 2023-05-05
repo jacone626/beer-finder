@@ -1,14 +1,15 @@
+
 <section class="container">
-  <h3 class="gallery-name">{{activity.name}}</h3>
+  <h2 class="gallery-name">Activity: {{pairing.activity.name}}</h2>
   <!-- If the user is logged in, render the gallery content -->
   <section class="flex-row justify-center">
-    {{#each activity.CannabisIndices }}
+    {{#each pairing.activity.cannabisIndices }}
     <header>{{name}}</header>
 
     <div class="card-body">
-      <img src="assets/{{image}}" alt="{{description}}">
+      <img src="/{{image}}" width= "400" height= "300" alt="{{description}}">
 <!-- If the user is logged in, render the review section -->
-{{#if loggedIn}}
+{{!-- {{#if logged_in}} --}}
     <form class="mb-3">
         <textarea
           class="form-control"
@@ -20,9 +21,9 @@
     </form>
   </section>
 <!-- TODO: Otherwise, provide a link to login -->
-{{else}}
+{{!-- {{else}} --}}
 <a href = "/login">You have to log in to leave a review</a>
-{{/if}}
+{{!-- {{/if}} --}}
 </div>
 {{/each}}
    </section>

@@ -32,7 +32,7 @@ CannabisIndex.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'CannabisIndex',
+    modelName: 'cannabisIndex',
   }
 );
 

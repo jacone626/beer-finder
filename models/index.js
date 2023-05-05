@@ -35,6 +35,21 @@ Activity.belongsToMany(CannabisIndex, {
     unique: true}
 });
 
+Activity.hasOne(Pairing, {
+  foreignKey: 'activity_id'
+});
+
+Pairing.belongsTo(Activity, {
+  foreignKey: 'activity_id'
+})
+
+CannabisIndex.hasOne(Pairing, {
+  foreignKey: 'cannabisIndex_id'
+});
+
+Pairing.belongsTo(CannabisIndex, {
+  foreignKey: 'cannabisIndex_id'
+})
 
 
 module.exports = { User, CannabisIndex, Activity, Pairing, Review };

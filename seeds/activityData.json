@@ -1,162 +1,50 @@
 [
     {
       "id": 1,
-      "name": "Playing guitar",
-      "emoji": "🎸"
+      "name": "Playing guitar"
     },
     {
       "id": 2,
-      "name": "Snowboarding",
-      "emoji": "🏂"
+      "name": "Snowboarding"
     },
     {
       "id": 3,
-      "name": "Volunteering",
-      "emoji": "🤝"
+      "name": "Volunteering"
     },
     {
       "id": 4,
-      "name": "Photography",
-      "emoji": "📷"
+      "name": "Photography"
     },
     {
       "id": 5,
-      "name": "Playing chess",
-      "emoji": "♟️"
+      "name": "Playing chess"
     },
     {
       "id": 6,
-      "name": "Surf fishing",
-      "emoji": "🎣🏄‍♂️"
+      "name": "Surf fishing"
     },
     {
       "id": 7,
-      "name": "Cooking on a grill",
-      "emoji": "🍢🔥"
+      "name": "Cooking on a grill"
     },
     {
       "id": 8,
-      "name": "Skydiving",
-      "emoji": "🪂"
+      "name": "Skydiving"
     },
     {
       "id": 9,
-      "name": "Surfing on the internet",
-      "emoji": "🌐🏄‍♂️"
+      "name": "Surfing on the internet"
     },
     {
       "id": 10,
-      "name": "Meditating",
-      "emoji": "🧘‍♂️"
+      "name": "Meditating"
     },
     {
       "id": 11,
-      "name": "Attending a concert",
-      "emoji": "🎶🤘"
+      "name": "Attending a concert"
     },
     {
       "id": 12,
-      "name": "Scuba diving",
-      "emoji": "🤿🌊"
-    },
-    {
-      "id": 13,
-      "name": "Rock climbing",
-      "emoji": "🧗‍♂️"
-    },
-    {
-      "id": 14,
-      "name": "Playing ping pong",
-      "emoji": "🏓"
-    },
-    {
-      "id": 15,
-      "name": "Snowshoeing",
-      "emoji": "🎿"
-    },
-    {
-      "id": 16,
-      "name": "Taking a road trip",
-      "emoji": "🚗🛣️"
-    },
-    {
-      "id": 17,
-      "name": "Playing volleyball",
-      "emoji": "🏐"
-    },
-    {
-      "id": 18,
-      "name": "Ice skating",
-      "emoji": "⛸️"
-    },
-    {
-      "id": 19,
-      "name": "Cooking on a campfire",
-      "emoji": "🔥🍳"
-    },
-    {
-      "id": 20,
-      "name": "Attending a concert",
-      "emoji": "🎶🤘"
-    },
-    {
-      "id": 21,
-      "name": "Swimming",
-      "emoji": "🏊‍♂️"
-    },
-    {
-      "id": 22,
-      "name": "Cooking",
-      "emoji": "🍳"
-    },
-    {
-      "id": 23,
-      "name": "Dancing",
-      "emoji": "💃"
-    },
-    {
-      "id": 24,
-      "name": "Reading",
-      "emoji": "📚"
-    },
-    {
-      "id": 25,
-      "name": "Hiking",
-      "emoji": "🥾"
-    },
-    {
-      "id": 26,
-      "name": "Painting",
-      "emoji": "🎨"
-    },
-    {
-      "id": 27,
-      "name": "Playing basketball",
-      "emoji": "🏀"
-    },
-    {
-      "id": 28,
-      "name": "Writing",
-      "emoji": "📝"
-    },
-    {
-      "id": 29,
-      "name": "Singing",
-      "emoji": "🎤"
-    },
-    {
-      "id": 30,
-      "name": "Yoga",
-      "emoji": "🧘‍♀️"
-    },
-    {
-      "id": 31,
-      "name": "Gardening",
-      "emoji": "🌱"
-    },
-    {
-      "id": 32,
-      "name": "Gaming",
-      "emoji": "🎮"
+      "name": "Scuba diving"
     }
 ]

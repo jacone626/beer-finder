@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../models');
+const { User, Pairing, Activity, Review, CannabisIndex } = require('../models');
 const withAuth = require('../utils/auth');
 
 const pairing = [
@@ -54,25 +54,31 @@ const pairing = [
   }
 ]
 
-
-
-
 router.get('/', async (req, res) => {
-  try {
-    // if (req.session.logged_in) {
-    //   res.redirect('/');
-    //   return;
-    // }
-  
-    // res.render('login');
-    
-    res.render('homepage', {pairing
-      // users, 
+    try {
+      const reviewData = await Review.findAll({
+        include: [{ 
+          model: User, 
+          attributes: ["name"] },
+          {model: Pairing,
+            include: [  
+            {model: Activity},
+            {model: CannabisIndex}
+            ]
+            }
+        ]
+    });
+
+
+const reviews = reviewData.map((review) => review.get({ plain: true }));
+
+// Pass serialized data and session flag into template
+  res.render('homepage', {
+      reviews, 
       // logged_in: req.session.logged_in 
     });
   } catch (err) {
     res.status(500).json(err);
-
   }
 });
 
@@ -118,3 +124,24 @@ router.get('/strain/:strainName', async (req, res) => {
    res.status(500).json(err);
   }
  });
+
+//Get Activity-Weed Pairings
+ router.get('/pairing/:id', async (req, res) => {
+  try {
+    const pairingData = await Pairing.findByPk(req.params.id, {
+      include: [{
+        all: true,
+        nested: true,
+      }]
+  });
+  
+  const pairing = pairingData.get({ plain: true });
+  
+  res.render('activity-pairings', {
+    pairing,
+    logged_in: req.session.logged_in,
+  });
+} catch (err) {
+  res.status(500).json(err);
+}
+});

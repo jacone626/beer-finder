@@ -1,6 +1,6 @@
 //get route, get by id route, and create route
 const router = require('express').Router();
-const { Pairing, Review, User} = require('../../models');
+const { Pairing, Review, User, Activity, CannabisIndex} = require('../../models');
 // const withAuth = require("../../utils/auth");
 
 
@@ -22,20 +22,17 @@ router.get("/", async (req, res) => {
 //Find a specific pairing
 router.get("/:id", async (req, res) => {
     try {
-      const activityData = await Pairing.findByPk(req.params.id, {
+      const pairingData = await Pairing.findByPk(req.params.id, {
         include: [{
-            model: Review,
-            include: { 
-              model: User, 
-              attributes: ["name"] }
-        },
-      ],
-      });
-      if (!activityData) {
+          all: true,
+          nested: true,
+        }]
+    });
+      if (!pairingData) {
         res.status(404).json({ message: "No pairing found with that id!" });
         return;
       }
-      res.status(200).json(activityData);
+      res.status(200).json(pairingData);
     } catch (err) {
       res.status(500).json(err);
     }
