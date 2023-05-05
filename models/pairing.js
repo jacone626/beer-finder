@@ -21,7 +21,7 @@ Pairing.init(
     cannabisIndex_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'CannabisIndex',
+        model: 'cannabisIndex',
         key: 'id',
       },
     },
