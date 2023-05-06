@@ -1,8 +1,28 @@
-.activity-name{
-    color: blue;
-    text-align: center;
+.body {
+    background-color: rgba(250, 245, 245, 0.719);
 }
 
-#activity-width{
-    width: 30%;
+#homepageTitle{
+    font-size: 80px;
+}
+
+#dropdown{
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    font-size: 18px;
+}
+
+h1{
+    font-size:  36px;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+}
+
+#cannabis-card{
+    width: 50%;
+}
+
+#CannabisImage{
+border-style: solid;
 }
