@@ -1,7 +1,19 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="/css/homepage.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/js/homepage.js"></script>
+</head>
+
+
+
+
 <header>
     <section class="hero is-success ">
         <div class="hero-body">
-            <p class="title has-text-centered " id="homepageTitle">Find my Weed</p>
+            <h1 class="title has-text-centered " id="homepageTitle">StrainFinder</h1>
 
 
 
@@ -32,50 +44,35 @@
 </header>
 
 
-<body id="body">
-    <section class="container is-fluid" id="recentReviews">
-        <div class="">
-            <h1 class="has-text-centered">Most Recent Reviews</h1>
-            {{#each reviews}}
+<body>
+    <h1 class="has-text-centered">Most Recent Reviews</h1>
+<div class="columns is-multiline is-flex-wrap-wrap is-justify-content-center">
+  {{#each reviews}}
+  <div class="column is-one-third-desktop is-half-tablet">
+    <div class="card">
+      <div class="card-content has-text-centered">
+        <img src="{{pairing.cannabisIndex.image}}"  alt="image of cannabis" id="CannabisImage" />
+        <p id="CannabisName">{{pairing.cannabisIndex.name}}</p>
+        <p id="Reviewer">User: {{user.name}}</p>
+        <p id="Activity">Activity: {{pairing.activity.name}}</p>
+        <p id="Strain">Strain: {{pairing.cannabisIndex.strain}}</p>
+        <p id="Rating">Rating: {{emoji_starRating}} stars</p>
+        <p id="Review">Review: {{content}}</p>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+</div>
 
 
-
-            <section class="section mb-5 mt-0 pt-0 startpage ">
-                <div class="container has-text-centered">
-                    <div class="row" id="columns-container">
-                        <div class="row is-one-third" id="data-card-row">
-                            <h1 class="is-size-1 title" id="left-box-title"></h1>
-                            <div class="card">
-                                <h2><strong><span id="symbol"></span></strong></h2>
-                                <div class="card-content">
-
-                                    <div class="content" id="cannabis-data">
-                                        <img src="{{pairing.cannabis.image}}" alt="" />
-                                        <h2>{{pairing.cannabis.name}}</h2>
-                                        <p>{{pairing.cannabis.strain}}</p>
-=======
-                                    <div class="content" id="coin-data">
-                                        <p>Reviewer: {{user.name}}</p>
-                                        <p>Activity: {{pairing.activity.name}}</p>
-                                        <img src="{{pairing.cannabisIndex.image}}" height="400" width= "500" alt="image of cannabis" />
-                                        <h2>{{pairing.cannabisIndex.name}}</h2>
-                                        <p>Strain: {{pairing.cannabisIndex.strain}}</p>
-                                        <p>Rating: {{emoji_starRating}} stars</p>
-                                        <p>Review: {{content}}</p>
-                                        <br><br>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-            </section>
-{{/each}}
-            <section class="container is-fluid" id="usersActivities">
-                <h1 class="has-text-centered">My User Activities</h1>
-                <div>
-                    {{!-- <p>{{FUTURE USER ACTIVITIES}}</p> --}}
-                </div>
-            </section>
+ <h1 class="has-text-centered">My User Activities</h1>
+<div class="columns is-centered">
+  <div class="column is-half">
+    <div class="card">
+      <div class="card-content has-text-centered">
+      </div>
+    </div>
+  </div>
+</div>
 </body>
+
