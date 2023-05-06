@@ -36,7 +36,7 @@
     <section class="container is-fluid" id="recentReviews">
         <div class="">
             <h1 class="has-text-centered">Most Recent Reviews</h1>
-            {{#each pairing as |pairing|}}
+            {{#each reviews}}
 
 
 
@@ -49,9 +49,14 @@
                                 <h2><strong><span id="symbol"></span></strong></h2>
                                 <div class="card-content">
                                     <div class="content" id="coin-data">
-                                        <img src="{{pairing.cannabis.image}}" alt="" />
-                                        <h2>{{pairing.cannabis.name}}</h2>
-                                        <p>{{pairing.cannabis.strain}}</p>
+                                        <p>Reviewer: {{user.name}}</p>
+                                        <p>Activity: {{pairing.activity.name}}</p>
+                                        <img src="{{pairing.cannabisIndex.image}}" height="400" width= "500" alt="image of cannabis" />
+                                        <h2>{{pairing.cannabisIndex.name}}</h2>
+                                        <p>Strain: {{pairing.cannabisIndex.strain}}</p>
+                                        <p>Rating: {{emoji_starRating}} stars</p>
+                                        <p>Review: {{content}}</p>
+                                        <br><br>
                                     </div>
                                 </div>
                             </div>
