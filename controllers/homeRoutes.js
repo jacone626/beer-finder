@@ -108,21 +108,28 @@ module.exports = router;
 
 
 
+
 router.get('/strain/:strainName', async (req, res) => {
   try {
-    // if (req.session.logged_in) {
-    //   res.redirect('/strain/:strainName');
-    //   return;
-    // }
-  
-    // res.render('login');
+    const cannabisData = await CannabisIndex.findAll({
+      where: { strain: req.params.strainName}
+    });
+    if (!cannabisData) {
+      res.status(404).json({ message: "No cannabis found with that strain" });
+      return;
+    }
 
-   res.render('findStrain', {
-    // users,
-    // logged_in: req.session.logged_in
-   });
+
+    const cannabisSerialize = cannabisData.map((weed) => weed.get({ plain: true }));
+    console.log(cannabisSerialize)
+    res.render("findStrain", {
+    cannabisSerialize,
+    strainName1: 'Indica'
+  
+    });
   } catch (err) {
-   res.status(500).json(err);
+    console.log(err)
+    res.status(500).json(err);
   }
  });
 
