@@ -1,19 +1,24 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activity Pairings</title>
+  <link rel="stylesheet" type="text/css" href="/css/activity.css">
+</head>
 
 <section class="container">
-  <h2 class="gallery-name">Activity: {{pairing.activity.name}}</h2>
+  <h2 class="activity-name">Activity: {{activity.name}}</h2>
   <!-- If the user is logged in, render the gallery content -->
-  <section class="flex-row justify-center">
-    {{#each pairing.activity.cannabisIndices }}
-    <header>{{name}}</header>
-
+  <section id="activity-width">
+    {{#each activity.cannabisIndices }}
     <div class="card-body">
+      <header>{{name}}</header>
       <img src="/{{image}}" width= "400" height= "300" alt="{{description}}">
 <!-- If the user is logged in, render the review section -->
 {{!-- {{#if logged_in}} --}}
     <form class="mb-3">
         <textarea
           class="form-control"
-          id="new-comment-form"
+          id="review-form"
           rows="3"
           placeholder="Add a review..."
         ></textarea>

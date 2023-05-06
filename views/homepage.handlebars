@@ -36,15 +36,16 @@
     <section class="container is-fluid" id="recentReviews">
         <div>
             <h1 class="has-text-centered">Most Recent Reviews</h1>
-            <img src="{{pairing.cannabis.image}}" alt="none"/>
             <div>
-            {{#each pairing as |pairing|}}
-            <img src="/..assets/{{pairing.cannabis.[0].image}}" alt="">
-            {{pairing.activity.image}}
-  {{#each pairing.reviews as |review|}}
+            {{#each reviews}}
+            <p>Reviewer: {{user.name}}</p>
+            <p>Activity: {{pairing.activity.name}}</p>
+            <img src="{{pairing.cannabisIndex.image}}" width="300" height ="200" alt="{{pairing.cannabisIndex.description}}">
+            <p>{{pairing.cannabisIndex.name}}</p>
+            <p>{{content}}</p>
+            <br><br>
    
     {{!-- {{> review-details review=review}} --}}
-  {{/each}}
 {{/each}}
     </section>
 
