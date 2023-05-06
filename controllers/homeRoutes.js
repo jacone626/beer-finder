@@ -107,6 +107,25 @@ router.get('/logout'), (req, res) => {
 module.exports = router;
 
 
+router.get('/strains', async (req, res) => {
+  // try {
+  //   const cannabisData = await CannabisIndex.findAll({
+  //     where: { strain: req.params.strainName}
+  //   });
+  //   if (!cannabisData) {
+  //     res.status(404).json({ message: "No cannabis found with that strain" });
+  //     return;
+  //   }
+
+
+    // const cannabisSerialize = cannabisData.map((weed) => weed.get({ plain: true }));
+    // console.log(cannabisSerialize)
+    res.render("strains");
+  // } catch (err) {
+  //   console.log(err)
+  //   res.status(500).json(err);
+  // }
+ });
 
 
 router.get('/strain/:strainName', async (req, res) => {
