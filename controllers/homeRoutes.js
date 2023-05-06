@@ -70,7 +70,8 @@ router.get('/', async (req, res) => {
     });
 
 
-const reviews = reviewData.map((review) => review.get({ plain: true }));
+    const reviews = reviewData.map((data) =>
+    data.get({ plain: true }));
 
 // Pass serialized data and session flag into template
   res.render('homepage', {
@@ -126,19 +127,16 @@ router.get('/strain/:strainName', async (req, res) => {
  });
 
 //Get Activity-Weed Pairings
- router.get('/pairing/:id', async (req, res) => {
+ router.get('/activity/:id', async (req, res) => {
   try {
-    const pairingData = await Pairing.findByPk(req.params.id, {
-      include: [{
-        all: true,
-        nested: true,
-      }]
-  });
+    const activityData = await Activity.findByPk(req.params.id, {
+      include: [{ model: CannabisIndex}]
+    });
   
-  const pairing = pairingData.get({ plain: true });
+  const activity = activityData.get({ plain: true });
   
   res.render('activity-pairings', {
-    pairing,
+    activity,
     logged_in: req.session.logged_in,
   });
 } catch (err) {
