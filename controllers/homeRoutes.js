@@ -70,7 +70,8 @@ router.get('/', async (req, res) => {
     });
 
 
-const reviews = reviewData.map((review) => review.get({ plain: true }));
+    const reviews = reviewData.map((data) =>
+    data.get({ plain: true }));
 
 // Pass serialized data and session flag into template
   res.render('homepage', {
@@ -107,38 +108,42 @@ module.exports = router;
 
 
 
+
 router.get('/strain/:strainName', async (req, res) => {
   try {
-    // if (req.session.logged_in) {
-    //   res.redirect('/strain/:strainName');
-    //   return;
-    // }
-  
-    // res.render('login');
+    const cannabisData = await CannabisIndex.findAll({
+      where: { strain: req.params.strainName}
+    });
+    if (!cannabisData) {
+      res.status(404).json({ message: "No cannabis found with that strain" });
+      return;
+    }
 
-   res.render('findStrain', {
-    // users,
-    // logged_in: req.session.logged_in
-   });
+
+    const cannabisSerialize = cannabisData.map((weed) => weed.get({ plain: true }));
+    console.log(cannabisSerialize)
+    res.render("findStrain", {
+    cannabisSerialize,
+    strainName1: 'Indica'
+  
+    });
   } catch (err) {
-   res.status(500).json(err);
+    console.log(err)
+    res.status(500).json(err);
   }
  });
 
 //Get Activity-Weed Pairings
- router.get('/pairing/:id', async (req, res) => {
+ router.get('/activity/:id', async (req, res) => {
   try {
-    const pairingData = await Pairing.findByPk(req.params.id, {
-      include: [{
-        all: true,
-        nested: true,
-      }]
-  });
+    const activityData = await Activity.findByPk(req.params.id, {
+      include: [{ model: CannabisIndex}]
+    });
   
-  const pairing = pairingData.get({ plain: true });
+  const activity = activityData.get({ plain: true });
   
   res.render('activity-pairings', {
-    pairing,
+    activity,
     logged_in: req.session.logged_in,
   });
 } catch (err) {
