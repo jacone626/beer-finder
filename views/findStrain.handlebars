@@ -1,6 +1,7 @@
-  <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
-      <section class="hero is-success ">
+text 2
+
+<header>
+    <section class="hero is-success ">
         <div class="hero-body">
             <p class="title has-text-centered " id="homepageTitle">Find my Weed</p>
 
@@ -30,20 +31,27 @@
                 </div>
             </div>
     </section>
-      <nav>
-        <div id="container">
-        <div id="search">
-            <label for="searchInput">Explore Strain<i class="fa fa-search"></i>Frequenter</label>
-            <input id="searchInput" type="text" placeholder="Search">
+</header>
+
+<body id="body">
+    <section class="container is-fluid" id="strainTypes"></section>
+    <div>
+        <h1 class="has-text-centered">Explore Strain</h1>
         </div>
-        
         <ul id="results">
-            <li class="name">Indica</li>
-            <li class="name">Hybrd</li>
-            <li class="name">Sativa</li>   
+            <li class="name">
+                <p> {{strainName1}}</p>
+                <script> console.log(strainName)</script>
+            </li>
+            <img src="public/assets/marijauna leaf.jpg" alt="none">
+            <div>
+                {{#each cannabisSerialize as |weed|}}
+                <h2>{{weed.name}}</h2>
+                {{/each}}
+
+            </div>
         </ul>
-        
+
     </div>
-        <script src="../public/js/find.js"></script>
-    </body>
-</html>
+    
+</body>
