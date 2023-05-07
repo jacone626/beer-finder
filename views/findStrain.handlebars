@@ -1,4 +1,11 @@
-text 2
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="/css/findStrain.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/findStrain.js"></script>
+</head>
 
 <header>
     <section class="hero is-success ">
@@ -37,21 +44,39 @@ text 2
     <section class="container is-fluid" id="strainTypes"></section>
     <div>
         <h1 class="has-text-centered">Explore Strain</h1>
-        </div>
-        <ul id="results">
-            <li class="name">
-                <p> {{strainName1}}</p>
-                <script> console.log(strainName)</script>
-            </li>
-            <img src="public/assets/marijauna leaf.jpg" alt="none">
-            <div>
-                {{#each cannabisSerialize as |weed|}}
-                <h2>{{weed.name}}</h2>
-                {{/each}}
+    </div>
+    <ul id="results">
+        <li class="name">
+            <p> {{strainName1}}</p>
+            <script> console.log(strainName)</script>
+        </li>
+        <img src="/assets/marijauna leaf.jpg" alt="none">
+        <div>
+            {{#each cannabisSerialize as |weed|}}
+            <h2>{{weed.name}}</h2>
+            {{/each}}
 
-            </div>
-        </ul>
+        </div>
+    </ul>
 
     </div>
-    
+
 </body>
+
+
+
+<div class="columns is-multiline is-flex-wrap-wrap is-justify-content-center" id="ReviewsContainer">
+    {{#each reviews}}
+    <div class="column is-one-third-desktop is-half-tablet">
+        <div class="card">
+            <div class="card-content has-text-centered">
+                {{#each cannabisSerialize as |weed|}}
+                <h2>{{weed.name}}</h2>
+                
+                {{/each}}
+                <img src="/assets/marijauna leaf.jpg" alt="none">
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>

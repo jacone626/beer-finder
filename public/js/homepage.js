@@ -18,7 +18,7 @@ $(document).ready(function () {
   $(".card").width(largestWidth);
 });
 
-$(document).ready(function () {
+$(window).on('load', function() {
   var smallestHeight = null;
   var smallestWidth = null;
   // loop through all images and find the smallest height and width

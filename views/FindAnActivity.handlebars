@@ -1,13 +1,12 @@
+<html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  <link rel="stylesheet" href="/css/homepage.css">
+  <link rel="stylesheet" href="/css/FindAnActivity.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="/js/homepage.js"></script>
+  <script src="/js/FindAnActivity.js"></script>
 </head>
-
-
 
 
 <header>
@@ -43,36 +42,14 @@
     </section>
 </header>
 
-
-<body>
-    <h1 class="has-text-centered">Most Recent Reviews</h1>
-<div class="columns is-multiline is-flex-wrap-wrap is-justify-content-center" id="ReviewsContainer">
-  {{#each reviews}}
-  <div class="column is-one-third-desktop is-half-tablet">
-    <div class="card">
-      <div class="card-content has-text-centered">
-        <img src="{{pairing.cannabisIndex.image}}"  alt="image of cannabis" id="CannabisImage" />
-        <p id="CannabisName">{{pairing.cannabisIndex.name}}</p>
-        <p id="Reviewer">User: {{user.name}}</p>
-        <p id="Activity">Activity: {{pairing.activity.name}}</p>
-        <p id="Strain">Strain: {{pairing.cannabisIndex.strain}}</p>
-        <p id="Rating">Rating: {{emoji_starRating}} stars</p>
-        <p id="Review">Review: {{content}}</p>
+<section id="ButtonSection">
+  <div>
+    <div class="container">
+      <div class="columns is-vcentered is-centered">
+        <div class="column is-narrow">
+          <div class="buttons" id="RandomButtons"></div>
+        </div>
       </div>
     </div>
   </div>
-  {{/each}}
-</div>
-
-
- <h1 class="has-text-centered">My User Activities</h1>
-<div class="columns is-centered" id="UserActivitiesContainer">
-  <div class="column is-half">
-    <div class="card">
-      <div class="card-content has-text-centered">
-      </div>
-    </div>
-  </div>
-</div>
-</body>
-
+</section>
