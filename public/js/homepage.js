@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(window).on("load", function() {
   // Find the largest card height and width
   var largestHeight = 0;
   var largestWidth = 0;
