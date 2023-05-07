@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="/css/findStrain.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="/js/findStrain.js"></script>
+    <script src="/js/strainSet.js"></script>
 </head>
 
 <header>
@@ -27,11 +27,11 @@
                     <div class="dropdown-content">
                         <div class="dropdown-item">
                             <div class="buttons is-centered">
-                                <button class="button is-primary is-rounded ">Logout</button>
+                                <button class="button is-primary is-rounded" id="logout">Logout</button>
                                 <hr class="dropdown-divider">
-                                <button class="button is-primary is-rounded">Homepage</button>
-                                <button class="button is-primary is-rounded"> Find an Activity</button>
-                                <button class="button is-primary is-rounded">Explore a Strain</button>
+                                <button class="button is-primary is-rounded" id="Homepage">Homepage</button>
+                                <button class="button is-primary is-rounded" id="Find an Activity"> Find an Activity</button>
+                                <button class="button is-primary is-rounded" id="Explore a Strain">Explore a Strain</button>
                             </div>
                         </div>
                     </div>
@@ -80,3 +80,5 @@
     </div>
     {{/each}}
 </div>
+
+<script src="/js/strainSet.js"></script>

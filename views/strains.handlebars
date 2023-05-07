@@ -1,35 +1,45 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="/css/login.css">
+  <script src="/js/findStrain.js"></script>
+</head>
+
+
 <header>
-    <section class="hero is-success ">
-        <div class="hero-body">
-            <p class="title has-text-centered " id="homepageTitle">StrainFinder</p>
+  <section class="hero is-success ">
+    <div class="hero-body">
+      <p class="title has-text-centered " id="homepageTitle">Strain Finder</p>
 
 
 
-            <div class="dropdown is-hoverable" id="dropdown">
-                <div class="dropdown-trigger">
-                    <button class="button is-primary" aria-haspopup="true" aria-controls="dropdown-menu4">
-                        <p>Menu</p>
+      <div class="dropdown is-hoverable" id="dropdown">
+        <div class="dropdown-trigger">
+          <button class="button is-primary" aria-haspopup="true" aria-controls="dropdown-menu4">
+            <p>Menu</p>
+          </button>
+        </div>
+        <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+          <div class="dropdown-content">
+            <div class="dropdown-item has-text-centered">
+              <p><strong>Welcome!</strong></p>
+              <hr class="dropdown-divider">
 
+              <div class="buttons is-centered">
 
-
-                    </button>
-                </div>
-                <div class="dropdown-menu" id="dropdown-menu4" role="menu">
-                    <div class="dropdown-content">
-                        <div class="dropdown-item">
-                            <div class="buttons is-centered">
-                                <button id="logout" class="button is-primary is-rounded ">Logout</button>
-                                <hr class="dropdown-divider">
-                                <button class="button is-primary is-rounded">Homepage</button>
-                                <button class="button is-primary is-rounded"> Find an Activity</button>
-                                <button class="button is-primary is-rounded">Explore a Strain</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <hr class="dropdown-divider">
+                <button class="button is-primary is-rounded" id="Homepage">Homepage</button>
+                <button class="button is-primary is-rounded" id="Find an Activity"> Find an Activity</button>
+                <button class="button is-primary is-rounded" id="Explore a Strain">Explore a Strain</button>
+              </div>
             </div>
-    </section>
+          </div>
+        </div>
+      </div>
+  </section>
 </header>
+
 
 <h1 class="has-text-centered ">Explore Strains</h1>
 <!--sativa button-->
@@ -96,3 +106,5 @@
             </div>
         </div>
 </section>
+
+ <script src="/js/findStrain.js"></script>
