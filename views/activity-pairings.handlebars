@@ -11,7 +11,7 @@
 <header>
   <section class="hero is-success ">
     <div class="hero-body">
-      <p class="title has-text-centered " id="homepageTitle">StrainFinder</p>
+      <p class="title has-text-centered " id="homepageTitle">Strain Finder</p>
 
 
 
@@ -41,57 +41,31 @@
   </section>
 </header>
 
-
-
-
-
-
-
-
-
-
-
-<section class="section mb-5 mt-0 pt-0 startpage ">
-  <div class="container has-text-centered">
-    <div class="row" id="columns-container">
-      <div class="row is-one-third" id="data-card-row">
-        <h1 class="is-size-1 title" id="left-box-title"></h1>
-        <div class="card">
-          <h2><strong><span id="symbol"></span></strong></h2>
-          <div class="card-content">
-            <div class="content" id="">
-              <h2 class="activity-name">Activity: {{activity.name}}</h2>
-              <!-- If the user is logged in, render the gallery content -->
-              {{#each activity.cannabisIndices }}
-              <div class="card-body">
-                <header>{{name}}</header>
-                <img src="/{{image}}" width="400" height="300" alt="{{description}}">
-                <!-- If the user is logged in, render the review section -->
-                {{!-- {{#if logged_in}} --}}
-                <form class="mb-3">
-                  <div class="field has-addons">
-                    <div class="control">
-                      <input class="input is-rounded" type="text" placeholder="Add a Review">
-                    </div>
-                    <div class="control">
-                      <button class="button is-info is-primary is-rounded" id="">
-                        Submit
-                      </button>
-                    </div>
-                  </div>
-                </form>
-                <!-- TODO: Otherwise, provide a link to login -->
-                {{!-- {{else}} --}}
-                <a href="/login">You have to log in to leave a review</a>
-                {{!-- {{/if}} --}}
-              </div>
-              {{/each}}
+<h1 class="has-text-centered">{{activity.name}}</h1>
+<div class="columns is-multiline is-flex-wrap-wrap is-justify-content-center">
+  {{#each activity.cannabisIndices}}
+  <div class="column is-one-third-desktop is-half-tablet">
+    <div class="card">
+      <div class="card-content has-text-centered">
+        <img src="/{{image}}" width="400" height="300" alt="{{description}}" id="CannabisImage">
+        <p id="CannabisName">{{name}}</p>
+        {{!-- Future dev Idea --}}
+        <p id="MostRecentReview">Most recent review</p>
+        {{!-- Future dev Idea --}}
+        <form class="mb-3">
+          <div class="field has-addons is-centered is-flex is-justify-content-center">
+            <div class="control">
+              <input class="input is-rounded" type="text" placeholder="Add a Review">
+            </div>
+            <div class="control">
+              <button class="button is-info is-primary is-rounded" id="">
+                Submit
+              </button>
             </div>
           </div>
-        </div>
+        </form>
       </div>
-
     </div>
   </div>
-</section>
-</section>
+  {{/each}}
+</div>

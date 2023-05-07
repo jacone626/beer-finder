@@ -1,0 +1,62 @@
+.body {
+    background-color: rgba(250, 245, 245, 0.719);
+}
+
+#homepageTitle{
+    font-size: 80px;
+}
+
+#dropdown{
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    font-size: 18px;
+}
+
+h1{
+    font-size:  36px;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+}
+
+#ButtonSection{
+    padding-top: 50px;
+}
+
+#RandomButtons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    height: 100%;
+  }
+
+  #RandomButtons .button {
+    font-size: 36px;
+  }
+
+  /* Add margin between buttons */
+  .button {
+    margin: 0.5rem 0;
+  }
+
+  @media (min-width: 768px) {
+    #RandomButtons .button {
+      font-size: 36px;
+    }
+  }
+  
+  /* Set font size for screens smaller than 768px */
+  @media (max-width: 768px) {
+    #RandomButtons .button {
+      font-size: 24px;
+    }
+  }
+
+  div.columns.is-vcentered.is-centered {
+    width: 100%;
+  }
+
+  .columns{
+    margin-left: 0px;
+  }

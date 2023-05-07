@@ -18,21 +18,28 @@ $(document).ready(function() {
     $(".card").width(largestWidth);
   });
 
-    $(document).ready(function() {
-  var smallestHeight = null;
-  var smallestWidth = null;
-  // loop through all images and find the smallest height and width
-  $('img').each(function() {
-    var height = $(this).height();
-    var width = $(this).width();
-    if (smallestHeight === null || height < smallestHeight) {
-      smallestHeight = height;
-    }
-    if (smallestWidth === null || width < smallestWidth) {
-      smallestWidth = width;
-    }
+  $(window).on('load', function() {
+    var smallestHeight = null;
+    var smallestWidth = null;
+    // loop through all images and find the smallest height and width
+    $('img').each(function () {
+      var height = $(this).height();
+      var width = $(this).width();
+      if (smallestHeight === null || height < smallestHeight) {
+        smallestHeight = height;
+      }
+      if (smallestWidth === null || width < smallestWidth) {
+        smallestWidth = width;
+      }
+    });
+    // set the height and width of all images to the smallest values
+    $('img').height(smallestHeight);
+    $('img').width(smallestWidth);
   });
-  // set the height and width of all images to the smallest values
-  $('img').height(smallestHeight);
-  $('img').width(smallestWidth);
-});
+
+
+
+
+
+
+
