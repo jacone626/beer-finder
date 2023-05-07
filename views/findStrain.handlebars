@@ -30,8 +30,10 @@
                                 <button class="button is-primary is-rounded" id="logout">Logout</button>
                                 <hr class="dropdown-divider">
                                 <button class="button is-primary is-rounded" id="Homepage">Homepage</button>
-                                <button class="button is-primary is-rounded" id="Find an Activity"> Find an Activity</button>
-                                <button class="button is-primary is-rounded" id="Explore a Strain">Explore a Strain</button>
+                                <button class="button is-primary is-rounded" id="Find an Activity"> Find an
+                                    Activity</button>
+                                <button class="button is-primary is-rounded" id="Explore a Strain">Explore a
+                                    Strain</button>
                             </div>
                         </div>
                     </div>
@@ -45,40 +47,30 @@
     <div>
         <h1 class="has-text-centered">Explore Strain</h1>
     </div>
-    <ul id="results">
-        <li class="name">
-            <p> {{strainName1}}</p>
-            <script> console.log(strainName)</script>
-        </li>
-        <img src="/assets/marijauna leaf.jpg" alt="none">
-        <div>
-            {{#each cannabisSerialize as |weed|}}
-            <h2>{{weed.name}}</h2>
-            {{/each}}
-
-        </div>
-    </ul>
-
+    {{#each cannabisSerialize as |weed|}}
+    <div>
+        <h2>{{weed.name}}</h2>
+        <img src="/assets/ChemDeLaChemNo5_INDICA.jpg" alt="image of cannabis" id="CannabisImage" />
     </div>
-
+    {{/each}}
 </body>
 
 
 
-<div class="columns is-multiline is-flex-wrap-wrap is-justify-content-center" id="ReviewsContainer">
+{{!-- <div class="columns is-multiline is-flex-wrap-wrap is-justify-content-center" id="ReviewsContainer">
     {{#each reviews}}
     <div class="column is-one-third-desktop is-half-tablet">
         <div class="card">
             <div class="card-content has-text-centered">
                 {{#each cannabisSerialize as |weed|}}
                 <h2>{{weed.name}}</h2>
-                
+
                 {{/each}}
                 <img src="/assets/marijauna leaf.jpg" alt="none">
             </div>
         </div>
     </div>
     {{/each}}
-</div>
+</div> --}}
 
 <script src="/js/strainSet.js"></script>
