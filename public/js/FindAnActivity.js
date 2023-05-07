@@ -1,5 +1,3 @@
-
-
 document.addEventListener("DOMContentLoaded", function () {
   const activities = [
     {
@@ -53,7 +51,8 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const randomActivities = activities.sort(() => 0.5 - Math.random()).slice(0, 5);
-
+  
+  console.log(randomActivities); // Log the randomActivities array
   // Generate buttons for each activity
   randomActivities.forEach(activity => {
     const button = document.createElement("button");
