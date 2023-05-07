@@ -3,7 +3,7 @@ const { Review, User, Pairing, Activity, CannabisIndex } = require('../../models
 const withAuth = require("../../utils/auth");
 
 //Add a review
-router.post("/", withAuth, async (req, res) => {
+router.post("/",  async (req, res) => {
     try {    
       const review = await Review.create({
         content: req.body.content,

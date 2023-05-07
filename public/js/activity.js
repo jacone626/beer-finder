@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(window).on("load", function() {
   // Find the largest card height and width
   var largestHeight = 0;
   var largestWidth = 0;
@@ -75,6 +75,36 @@ document.addEventListener("DOMContentLoaded", function (event) {
   });
 })
 
+// Create new review
+const newReviewHandler = async (event) => {
+  event.preventDefault();
 
+  const content = document.querySelector('#new-review').value.trim();
+  const emoji_starRating = document.querySelector('#new-star-rating').value.trim();
+  const image = document.getElementById('CannabisImage').outerHTML
+  const name = document.querySelector('#CannabisName').outerHTML
 
+  if (content && emoji_starRating ) {
+    const response = await fetch('/api/reviews', {
+      method: 'POST',
+      body: JSON.stringify({ content, emoji_starRating }),
+      headers: { 'Content-Type': 'application/json' },
+    });
 
+    if (response.ok) {
+      document.location.replace('/'); 
+    } else {
+      alert('Failed to create a new review.'); 
+    }
+  }
+};
+
+document.addEventListener("DOMContentLoaded", function (event) {
+
+  var button = document.getElementById("new-review-form");
+
+  button.addEventListener("submit", newReviewHandler);
+})
+
+const names = document.querySelector('#CannabisName').outerHTML
+console.log(names)

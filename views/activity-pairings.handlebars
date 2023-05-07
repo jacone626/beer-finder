@@ -5,7 +5,9 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <link rel="stylesheet" type="text/css" href="/css/activity.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="/js/activity.js"></script>
+  <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    ></script>
 </head>
 
 <header>
@@ -45,20 +47,27 @@
 <div class="columns is-multiline is-flex-wrap-wrap is-justify-content-center">
   {{#each activity.cannabisIndices}}
   <div class="column is-one-third-desktop is-half-tablet">
-    <div class="card">
+    <div class="card" id="activity-card">
       <div class="card-content has-text-centered">
         <img src="/{{image}}" width="400" height="300" alt="{{description}}" id="CannabisImage">
         <p id="CannabisName">{{name}}</p>
         {{!-- Future dev Idea --}}
         <p id="MostRecentReview">Most recent review</p>
         {{!-- Future dev Idea --}}
-        <form class="mb-3">
+        <form class="mb-3" id="new-review-form">
+           <input type="hidden" name="activityName" value="{{activity.name}}">
+           <input type="hidden" name="cannabisName" value="{{name}}">
+           <input type="hidden" name="cannabisImage" value="{{image}}">
+            <input type="hidden" name="cannabisStrain" value="{{strain}}">
           <div class="field has-addons is-centered is-flex is-justify-content-center">
             <div class="control">
-              <input class="input is-rounded" type="text" placeholder="Add a Review">
+              <input class="input is-rounded" type="text" id="new-review" placeholder="Add a Review">
             </div>
             <div class="control">
-              <button class="button is-info is-primary is-rounded" id="">
+              <input class="input is-rounded" type="text" id= "new-star-rating" placeholder="Add a Rating (1-5)">
+            </div>
+            <div class="control">
+              <button type="submit" class="button is-info is-primary is-rounded">
                 Submit
               </button>
             </div>
@@ -69,3 +78,7 @@
   </div>
   {{/each}}
 </div>
+
+<p id="MostRecent">Most recent rev</p>
+
+<script src="/js/activity.js"></script>
