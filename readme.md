@@ -1,6 +1,6 @@
 # Find My Weed
 
-Find My Weed is a web app that uses a database to store different strains of weed and connects them to activites that the strain is good for. You have the option to choose an activity and be shown a list of strains that are recommended for said activity. You also have the option of reviewing the strain with 1-5 stars and commenting on your review. The user is able to log in and see the last activity they accessed as well as the most recent reviews.
+Find My Weed is a web app that uses a database to store different strains of weed and connects them to activites that the strain is good for. You have the option to choose an activity and be shown a list of strains that are recommended for said activity. You also have the option of reviewing the strain with 1-5 stars and commenting on your review. The user is able to log in and see the last activity they accessed as well as view all the strains based on their type (indica, sativa, hybrid).
 
 ## Table of Contents
 
@@ -13,13 +13,13 @@ Find My Weed is a web app that uses a database to store different strains of wee
 
 ## User Story
 
-AS Someone looking for an activity to do high 
+As someone interested in weed
 
 
-I WANT a list of strains that are compatible with the activity of my choice 
+I want to be able to look up specific strains
 
 
-SO THAT I can enjoy life.
+So that I can see descriptions for different types under each strain
 
 
 ## Acceptance Criteria
@@ -38,7 +38,27 @@ Go to deployed heroku link
 
 ## DeploymentURL
 
-TBA
+https://strain-finder-app.herokuapp.com/
+
+## Usage
+-Login Page
+<img src='.\public\assets\login.png'>
+
+
+-Homepage
+<img src='.\public\assets\homepage.png'>
+
+
+-Activities List
+<img src='.\public\assets\activities.png'>
+
+
+-Strains Page
+<img src='.\public\assets\strains.png'>
+
+
+-Strain List
+<img src='.\public\assets\strainslist.png'>
 
 ## Wireframe
 
@@ -61,10 +81,22 @@ TBA
 -User Profile
 <img src='.\public\assets\wfprofile.png'>
 
-## Usage
 
-TBA
+## Credits/Technology Used
 
-## Credits
+-Nodemon (npm)
 
-TBA
+
+-Age-Check (npm)
+
+
+-Bulma CSS
+
+
+-Handlebars.js
+
+
+-Express.js
+
+
+-Sequelize
