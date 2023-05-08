@@ -64,7 +64,14 @@
               <input class="input is-rounded" type="text" id="new-review" placeholder="Add a Review">
             </div>
             <div class="control">
-              <input class="input is-rounded" type="text" id= "new-star-rating" placeholder="Add a Rating (1-5)">
+              <select class="input is-rounded" type="text" id= "new-star-rating" placeholder="Add a Rating (1-5)">
+                <option value="">Add a Rating</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select> 
             </div>
             <div class="control">
               <button type="submit" data-index= "{{pairing.id}}"class="button is-info is-primary is-rounded" id="submit-button">
