@@ -2,119 +2,119 @@
   {
     "id": 1,
     "name": "Chem De La Chem #5",
-    "description": "TBD",
+    "description": "This strain is so potent, you might feel like you're in a chemistry lab. Just don't mix it with the wrong chemicals, or you might end up like the guys from Breaking Bad.",
     "strain": "Indica",
     "image": "assets/ChemDeLaChemNo5_INDICA.jpg"
   },
   {
     "id": 2,
     "name": "Double Afghan Chunk #24",
-    "description": "TBD",
+    "description": "This strain is like a big, comfy blanket that wraps you up and never lets go. It's so relaxing, you'll feel like you're in the middle of a spa day with your best buds.",
     "strain": "Indica",
     "image":"assets/DoubleAfghanChunk24_INDICA.jpg"
   },
   {
     "id": 3,
     "name": "Florthern Lights Haze #11",
-    "description": "TBD",
+    "description": "This strain is like a magic carpet ride that takes you to a mystical land of euphoria. It's the perfect escape from reality, like a scene out of Alice in Wonderland.",
     "strain": "Hybrid",
     "image":"assets/FlorthernLightsHazeNo11_Hybrid.jpg"
   },
   {
     "id": 4,
     "name": "Hogplums Haze #30",
-    "description": "TBD",
+    "description": "This strain is so sweet, you'll swear you're tasting a ripe hogplum right off the vine. It's like candy for your taste buds, and it'll leave you feeling like a kid again.",
     "strain": "Hybrid",
     "image":"assets/HogplumsHazeNo30_Hybrid.jpg"
   },
   {
     "id": 5,
     "name": "Kaliburst #31",
-    "description": "TBD",
+    "description": "This strain is like a party in your mouth, with flavors that burst like fireworks on the Fourth of July. It's like a kaleidoscope of taste and sensation, just like the trippy visuals in a Pink Floyd concert.",
     "strain": "Hybrid",
     "image":"assets/KaliburstNo31_HYBRID.jpeg"
   },
   {
     "id": 6,
     "name": "LA Biker #2",
-    "description": "TBD",
+    "description": "This strain is like a ride down the Pacific Coast Highway on a Harley. It's the perfect balance of power and relaxation, just like a true biker at heart.",
     "strain": "Indica",
     "image":"assets/LABikerNo2_Indica.png"
   },
   {
     "id": 7,
     "name": "Legend of 91 #9",
-    "description": "TBD",
+    "description": "This strain is like a legend in its own right, with a mystique that's hard to define. It's like the Holy Grail of cannabis, just like the fabled cup that Indiana Jones was searching for.",
     "strain": "Indica",
     "image":"assets/LegendOf91No9_INDICA.jpg"
   },
   {
     "id": 8,
     "name": "Londyn Lei #4",
-    "description": "TBD",
+    "description": "This strain is like a breath of fresh air, with a taste that's as refreshing as a cool breeze on a hot summer day. It's like the perfect escape from the daily grind, just like a stroll through Hyde Park in London.",
     "strain": "Hybrid",
     "image":"assets/LondynLeiNo4_HYBRID.png"
   },
   {
     "id": 9,
     "name": "Londyn Lei #50",
-    "description": "TBD",
+    "description": "This strain is like a bouquet of flowers, with a fragrance that's as delightful as a stroll through a blooming garden. It's like the perfect way to brighten up your day, just like a sunny afternoon in Notting Hill..",
     "strain": "Hybrid",
     "image":"assets/LondynLeiNo50_hybrid.jpg"
   },
   {
     "id": 10,
     "name": "Marie Laveau #42",
-    "description": "TBD",
+    "description": "This strain is like a spell that enchants your mind, body, and soul. It's like the voodoo magic of the famous New Orleans queen, Marie Laveau.",
     "strain": "Indica",
     "image":"assets/MarieLaveauNo42.png"
   },
   {
     "id": 11,
     "name": "Orange Slice Nebula #41",
-    "description": "TBD",
+    "description": "This strain is like a trip through the cosmos, with flavors that are out of this world. It's like a journey through the stars, just like the epic adventures in the sci-fi classic, Star Trek.",
     "strain": "Hybrid",
     "image":"assets/OrangeSliceNebulaNo41_HYBRID.jpeg"
   },
   {
     "id": 12,
     "name": "PT Stardawg #36",
-    "description": "TBD",
+    "description": "This strain is like a superstar, with a power that's hard to match. It's like the king of the jungle, just like the famous lions from The Lion King.",
     "strain": "Indica",
     "image":"assets/PTStardawgNo36_INDICA.jpg"
   },
   {
     "id": 13,
     "name": "Purple Thai #22",
-    "description": "TBD",
+    "description": "This strain is like a mystical journey through the jungles of Thailand, with a flavor that's as exotic as the country itself. It's like the perfect escape to paradise, just like a scene from The Beach.",
     "strain": "Sativa",
     "image":"assets/PTStardawgNo36_INDICA.jpg"
   },
   {
     "id": 14,
     "name": "Scarlet-Nova #33",
-    "description": "TBD",
+    "description": "This strain is like a fiery comet that streaks across the night sky, with a flavor that's as bold as its name. It's like the perfect way to light up your evening, just like a night out with the gang from That '70s Show.",
     "strain": "Hybrid",
     "image":"assets/Scarlet-NovaNo33_HYBRID.jpeg"
   },
   {
     "id": 15,
     "name": "Super Silver Thai #5",
-    "description": "TBD",
+    "description": "This strain is like a superhero, with a power that's hard to match. It's like the Man of Steel himself, just like the epic battles in the DC Universe.",
     "strain": "Sativa",
     "image":"assets/SuperSilverThaiNo5_SATIVA.jpg"
   },
   {
     "id": 16,
     "name": "Super Silver Thai #17",
-    "description": "TBD",
+    "description": "This strain is like a superhero, with a power that's hard to match. It's like the Man of Steel himself, just like the epic battles in the DC Universe.",
     "strain": "Sativa",
     "image":"assets/SuperSilverThaiNo17_SATIVA.jpeg"
   },
   {
     "id": 17,
     "name": "Urban Legend #48",
-    "description": "TBD",
+    "description": "As the first toke is taken, a wave of tranquility washes over the body, melting away tension and stress.",
     "strain": "Indica",
     "image":"assets/UrbanLegendNo48_INDICA.jpg"
   }
