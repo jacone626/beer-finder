@@ -34,7 +34,8 @@
 document.addEventListener("DOMContentLoaded", function (event) {
     var button = document.getElementById("sativa-btn");
     button.addEventListener("click", function () {
-        document.location.href = 'http://localhost:3001/strain/Sativa';
+        document.location.href = window.location.origin + "/strain/Sativa";
+        
     });
 })
 
@@ -43,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     var button = document.getElementById("indica-btn");
 
     button.addEventListener("click", function () {
-        document.location.href = 'http://localhost:3001/strain/Indica';
+        document.location.href = window.location.origin + "/strain/Indica";
     });
 })
 
@@ -52,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     var button = document.getElementById("hybrid-btn");
 
     button.addEventListener("click", function () {
-        document.location.href = 'http://localhost:3001/strain/Hybrid';
+        document.location.href = window.location.origin + '/strain/Hybrid';
     });
 })
 

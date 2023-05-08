@@ -1,4 +1,4 @@
-$(window).on("load", function() {
+$(window).on("load", function () {
   // Find the largest card height and width
   var largestHeight = 0;
   var largestWidth = 0;
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   var button = document.getElementById("logout");
 
   button.addEventListener("click", function () {
-    document.location.href = 'http://localhost:3001/login';
+    document.location.href = window.location.origin + "/login";
   });
 
 })
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   var button = document.getElementById("Find an Activity");
 
   button.addEventListener("click", function () {
-      document.location.href = window.location.origin + '/FindAnActivity';
+    document.location.href = window.location.origin + '/FindAnActivity';
   });
 })
 
