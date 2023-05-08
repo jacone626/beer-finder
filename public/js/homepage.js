@@ -94,7 +94,7 @@ const ratingElements = document.querySelectorAll("#ReviewsContainer #Rating");
 for (let i = 0; i < ratingElements.length; i++) {
   const ratingElement = ratingElements[i];
   const starCount = parseInt(ratingElement.textContent.match(/\d+/)[0]);
-  const stars = "⭐".repeat(starCount);
+  const stars = "⭐".repeat(starCount-1);
   ratingElement.textContent += stars;
   ratingElement.textContent = ratingElement.textContent.replace(/\d+/g, "");
 }
