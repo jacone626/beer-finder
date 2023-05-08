@@ -19,7 +19,7 @@ router.get("/", async (req, res) => {
 router.get("/:id", async (req, res) => {
     try {
       const activityData = await Activity.findByPk(req.params.id, {
-        include: [{ model: CannabisIndex}]
+        include: [{ model: CannabisIndex}],
       });
       if (!activityData) {
         res.status(404).json({ message: "No activity found with that id!" });

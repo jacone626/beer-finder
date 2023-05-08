@@ -8,6 +8,10 @@ router.post("/",  async (req, res) => {
       const review = await Review.create({
         content: req.body.content,
         emoji_starRating: req.body.emoji_starRating,
+        image: req.body.image,
+        name: req.body.name,
+        strain: req.body.strain,
+        activity: req.body.activity,
         pairing_id: req.body.pairing_id,
         user_id: req.session.user_id,
       });

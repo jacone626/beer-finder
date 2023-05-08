@@ -19,6 +19,22 @@ Review.init(
       type: DataTypes.FLOAT,
       allowNull: false,
     },
+    image: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    strain: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    activity: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     pairing_id: {
       type: DataTypes.INTEGER,
       references: {
