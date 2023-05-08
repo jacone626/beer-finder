@@ -92,8 +92,7 @@ router.get('/strain/:strainName', async (req, res) => {
     console.log(cannabisSerialize)
     res.render("findStrain", {
     cannabisSerialize,
-    strainName1: 'Indica'
-  
+    strainName: req.params.strainName  
     });
   } catch (err) {
     console.log(err)
