@@ -5,12 +5,14 @@
     <link rel="stylesheet" href="/css/findStrain.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="/js/strainSet.js"></script>
+    <script src="/js/helpers.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
 </head>
 
 <header>
     <section class="hero is-success ">
         <div class="hero-body">
-            <p class="title has-text-centered " id="homepageTitle">Find my Weed</p>
+            <p class="title has-text-centered " id="homepageTitle">Strain Finder</p>
 
 
 
@@ -42,35 +44,21 @@
     </section>
 </header>
 
-<body id="body">
-    <section class="container is-fluid" id="strainTypes"></section>
-    <div>
-        <h1 class="has-text-centered">Explore Strain</h1>
-    </div>
-    {{#each cannabisSerialize as |weed|}}
-    <div>
-        <h2>{{weed.name}}</h2>
-        <img src="/assets/ChemDeLaChemNo5_INDICA.jpg" alt="image of cannabis" id="CannabisImage" />
-    </div>
-    {{/each}}
-</body>
+<h1 class="has-text-centered">{{strainName}}</h1>
 
-
-
-{{!-- <div class="columns is-multiline is-flex-wrap-wrap is-justify-content-center" id="ReviewsContainer">
-    {{#each reviews}}
+<div class="columns is-multiline is-flex-wrap-wrap is-justify-content-center" id="ReviewsContainer">
+    {{#each cannabisSerialize}}
     <div class="column is-one-third-desktop is-half-tablet">
-        <div class="card">
+        <div class="card" id="cannabis-card">
             <div class="card-content has-text-centered">
-                {{#each cannabisSerialize as |weed|}}
-                <h2>{{weed.name}}</h2>
-
-                {{/each}}
-                <img src="/assets/marijauna leaf.jpg" alt="none">
+                <img src="/{{this.image}}" alt="image of {{this.name}}" id="CannabisImage" />
+                <h2>{{this.name}}</h2>
             </div>
         </div>
     </div>
     {{/each}}
-</div> --}}
+</div>
+
+
 
 <script src="/js/strainSet.js"></script>

@@ -29,13 +29,12 @@
 
 
 
-//addEventListener for Strain types
 
+//addEventListener for Strain types
 document.addEventListener("DOMContentLoaded", function (event) {
     var button = document.getElementById("sativa-btn");
-
     button.addEventListener("click", function () {
-        document.location.href = 'http://localhost:3001/strain/sativa';
+        document.location.href = 'http://localhost:3001/strain/Sativa';
     });
 })
 
@@ -44,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     var button = document.getElementById("indica-btn");
 
     button.addEventListener("click", function () {
-        document.location.href = 'http://localhost:3001/strain/indica';
+        document.location.href = 'http://localhost:3001/strain/Indica';
     });
 })
 
@@ -53,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     var button = document.getElementById("hybrid-btn");
 
     button.addEventListener("click", function () {
-        document.location.href = 'http://localhost:3001/strain/hybrid';
+        document.location.href = 'http://localhost:3001/strain/Hybrid';
     });
 })
 
