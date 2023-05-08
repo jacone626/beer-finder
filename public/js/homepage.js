@@ -39,6 +39,8 @@ $(window).on('load', function () {
 
 const selectedActivities = JSON.parse(localStorage.getItem("selectedActivities")) || [];
 const uniqueActivityIds = new Set();
+console.log(selectedActivities)
+  console.log(uniqueActivityIds)
 selectedActivities.forEach(activity => {
   if (!uniqueActivityIds.has(activity.id)) {
     uniqueActivityIds.add(activity.id);
