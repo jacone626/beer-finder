@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     var button = document.getElementById("hybrid-btn");
 
     button.addEventListener("click", function () {
-        document.location.href = window.location.origin + 'strain/Hybrid';
+        document.location.href = window.location.origin + '/strain/Hybrid';
     });
 })
 
