@@ -6,6 +6,8 @@ const withAuth = require('../utils/auth');
 router.get('/', withAuth, async (req, res) => {
     try {
       const reviewData = await Review.findAll({
+        order: [['createdAt', 'DESC']],
+        limit: 5,
         include: [{ 
           model: User, 
           attributes: ["name"] },

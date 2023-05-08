@@ -73,10 +73,3 @@ document.addEventListener("DOMContentLoaded", function (event) {
     document.location.href = window.location.origin + '/strains';
   });
 })
-
-//Random color generator
- titleEl = document.getElementById("homepageTitle")
-
- console.log(titleEl)
-
- titleEl.innerHTML = "Strain Finder"
