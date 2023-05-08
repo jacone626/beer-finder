@@ -1,4 +1,4 @@
-.html{
+.html {
     max-width: 100%;
 }
 
@@ -9,27 +9,46 @@
 .hero {
     width: 100%;
     max-width: none;
-  }
-#homepageTitle{
+}
+
+#homepageTitle {
     font-size: 80px;
 }
 
-#dropdown{
+#dropdown {
     position: absolute;
     top: 8px;
     left: 16px;
     font-size: 18px;
 }
 
-h1{
-    font-size:  36px;
+h1 {
+    font-size: 36px;
     text-decoration: underline;
     text-underline-offset: 8px;
-    margin-bottom: 25px;
 }
-#ReviewsContainer{
-    max-width: 100%;
+
+.columns{
+    margin-left: 0;
 }
-#cannabis-card{
+#CannabisImage {
+    border-style: solid;
+}
+
+#StrainCard {
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+#strainsContainer{
+    max-width: 100%;
+    margin-top: 50px;
+}
+
+#sativa-btn{
+    margin-top: 10px;
+}
+#indica-btn{
+    margin-top: 10px;
+}
+#hybrid-btn{
+    margin-top: 10px;
 }

@@ -2,15 +2,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  <link rel="stylesheet" href="/css/login.css">
-  <script src="/js/findStrain.js"></script>
+  <link rel="stylesheet" href="/css/strains.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 
 <header>
   <section class="hero is-success ">
     <div class="hero-body">
-      <p class="title has-text-centered " id="homepageTitle">Strain Finder</p>
+      <h1 class="title has-text-centered " id="homepageTitle">Strain Finder</h1>
 
 
 
@@ -39,72 +39,47 @@
       </div>
   </section>
 </header>
-
-
-<h1 class="has-text-centered ">Explore Strains</h1>
-<!--sativa button-->
-<section class="section mb-5 mt-0 pt-0 startpage ">
-    <div class="container has-text-centered">
-        <div class="row" id="columns-container">
-            <div class="row is-one-third" id="data-card-row">
-                <h1 class="is-size-1 title" id="left-box-title"></h1>
-                <div class="card">
-                    <h2><strong><span id="symbol"></span></strong></h2>
-                    <div class="card-content">
-                        <button class="is-btn" id="sativa-btn">
-                        <div class="content" id="cannabis-card">
-                            <h1>Sativas</h1>
-                            <img src="assets/SuperSilverThaiNo5_SATIVA.jpg" width="400" height="300">
-                           
-                        </div>
-                        </button>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-</section>
-<!-- indica button-->
-<section class="section mb-5 mt-0 pt-0 startpage ">
-    <div class="container has-text-centered">
-        <div class="row" id="columns-container">
-            <div class="row is-one-third" id="data-card-row">
-                <h1 class="is-size-1 title" id="left-box-title"></h1>
-                <div class="card">
-                    <h2><strong><span id="symbol"></span></strong></h2>
-                    <div class="card-content">
-                        <button class="is-btn" id="indica-btn">
-                        <div class="content" id="cannabis-card">
-                             <h1>Indicas</h1>
-                            <img src="assets/DoubleAfghanChunk24_INDICA.jpg" width="400" height="300" alt="weed">
-                        </div>
-                        </button>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-</section>
-<!-- hybrid button-->
-<section class="section mb-5 mt-0 pt-0 startpage ">
-    <div class="container has-text-centered">
-        <div class="row" id="columns-container">
-            <div class="row is-one-third" id="data-card-row">
-                <h1 class="is-size-1 title" id="left-box-title"></h1>
-                <div class="card">
-                    <h2><strong><span id="symbol"></span></strong></h2>
-                    <div class="card-content">
-                        <button class="is-btn" id="hybrid-btn">
-                            <div class="content" id="cannabis-card">
-                                 <h1>Hybrids</h1>
-                                <img src="assets/HogplumsHazeNo30_Hybrid.jpg" width="400" height="300">
-                            </div>
-                        </button>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-</section>
-
- <script src="/js/findStrain.js"></script>
+<div class="container is-flex is-align-items-center"></div>
+<div class="columns is-multiline is-flex-wrap-wrap is-justify-content-center is-align-items-center" id="strainsContainer">
+  <div class="column is-one-third-desktop is-half-tablet is-align-items-center">
+    <div class="card" >
+      <div class="card-content has-text-centered" id="StrainCard">
+          <h1>Hybrids</h1>
+          <figure class="image is-4by3">
+            <img src="assets/HogplumsHazeNo30_Hybrid.jpg" alt="Hybrids" id="CannabisImage">
+          </figure>
+          <button class="button is-primary" id="hybrid-btn">
+            See all Hybrids
+          </button>
+      </div>
+    </div>
+  </div>
+  <div class="column is-one-third-desktop is-half-tablet">
+    <div class="card" >
+      <div class="card-content has-text-centered" id="StrainCard">
+           <h1>Indicas</h1>
+          <figure class="image is-4by3">
+            <img src="assets/DoubleAfghanChunk24_INDICA.jpg" alt="Indicas" id="CannabisImage">
+          </figure>
+          <button class="button is-primary" id="indica-btn">
+            See all Indicas
+          </button>
+      </div>
+    </div>
+  </div>
+  <div class="column is-one-third-desktop is-half-tablet">
+    <div class="card">
+      <div class="card-content has-text-centered" id="StrainCard">
+          <h1>Sativas</h1>
+          <figure class="image is-4by3">
+            <img src="assets/SuperSilverThaiNo5_SATIVA.jpg" alt="Sativas" id="CannabisImage">
+          </figure>
+          <button class="button is-primary" id="sativa-btn">
+            See all Sativas
+          </button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<script src="/js/findStrain.js"></script>
