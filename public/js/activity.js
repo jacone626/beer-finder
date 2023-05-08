@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   var button = document.getElementById("Homepage");
 
   button.addEventListener("click", function () {
-    document.location.href = 'http://localhost:3001/';
+    document.location.href = window.location.origin;
   });
 })
 
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   var button = document.getElementById("Find an Activity");
 
   button.addEventListener("click", function () {
-    document.location.href = 'http://localhost:3001/FindAnActivity';
+      document.location.href = window.location.origin + '/FindAnActivity';
   });
 })
 
@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   var button = document.getElementById("Explore a Strain");
 
   button.addEventListener("click", function () {
-    document.location.href = 'http://localhost:3001/strains';
+    document.location.href = window.location.origin + '/strains';
   });
 })
 
