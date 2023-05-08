@@ -2,7 +2,7 @@ $(window).on("load", function() {
   // Find the largest card height and width
   var largestHeight = 0;
   var largestWidth = 0;
-  $(".card").each(function () {
+  $(".card").not(".user-activities-card").each(function () { // exclude the user-activities-card from resizing
     var cardHeight = $(this).height();
     var cardWidth = $(this).width();
     if (cardHeight > largestHeight) {
@@ -13,9 +13,9 @@ $(window).on("load", function() {
     }
   });
 
-  // Set the height and width of all the cards to match the largest card
-  $(".card").height(largestHeight);
-  $(".card").width(largestWidth);
+  // Set the height and width of all the cards except user-activities-card to match the largest card
+  $(".card").not(".user-activities-card").height(largestHeight);
+  $(".card").not(".user-activities-card").width(largestWidth);
 });
 
 $(window).on('load', function () {
@@ -35,6 +35,22 @@ $(window).on('load', function () {
   // set the height and width of all images to the smallest values
   $('img').height(smallestHeight);
   $('img').width(smallestWidth);
+});
+
+const selectedActivities = JSON.parse(localStorage.getItem("selectedActivities")) || [];
+const uniqueActivityIds = new Set();
+selectedActivities.forEach(activity => {
+  if (!uniqueActivityIds.has(activity.id)) {
+    uniqueActivityIds.add(activity.id);
+    const button = document.createElement("button");
+    button.classList.add("button", "is-rounded", "is-primary", "is-fullwidth", "is-size-5-desktop", "is-vcentered", "mx-2");
+    button.style.marginBottom = "20px";
+    button.textContent = activity.name;
+    button.addEventListener("click", () => {
+      window.location.href = window.location.origin + '/' + 'activity' + '/' + activity.id;
+    });
+    document.querySelector("#UserActivitiesContainer .card-content").appendChild(button);
+  }
 });
 
 //addEventListener for menu dropdown selections
@@ -73,3 +89,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
     document.location.href = window.location.origin + '/strains';
   });
 })
+
+const ratingElements = document.querySelectorAll("#ReviewsContainer #Rating");
+for (let i = 0; i < ratingElements.length; i++) {
+  const ratingElement = ratingElements[i];
+  const starCount = parseInt(ratingElement.textContent.match(/\d+/)[0]);
+  const stars = "⭐".repeat(starCount);
+  ratingElement.textContent += stars;
+  ratingElement.textContent = ratingElement.textContent.replace(/\d+/g, "");
+
