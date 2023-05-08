@@ -6,8 +6,8 @@ function ageCheck() {
   var ageCancelButton = document.getElementById("ageCancelButton");
   var modal = document.getElementById("ageCheckModal");
 var closeButton = document.querySelector(".modal-close");
-var ageSelect = document.getElementById("ageSelect");
-options = document.querySelectorAll(".select-option");
+var select = document.getElementById("ageSelect");
+var options = document.querySelectorAll(".select-option");
   for (let i = 5; i <= 120; i++) {
     const option = document.createElement("option");
     option.value = i;
@@ -42,7 +42,7 @@ options = document.querySelectorAll(".select-option");
 }
 // Call the ageCheck function when the login page is rendered
 ageCheck();
-ageSelect.addEventListener("click", function() {
+select.addEventListener("click", function() {
   document.querySelector(".select-dropdown").classList.toggle("show");
 });
 options.forEach(function(option) {
