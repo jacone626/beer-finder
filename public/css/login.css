@@ -1,77 +1,95 @@
 body {
     background-color: rgba(250, 245, 245, 0.719);
 }
-#homepageTitle {
+
+#homepageTitle{
     font-size: 80px;
 }
-#dropdown {
+
+#dropdown{
     position: absolute;
     top: 8px;
     left: 16px;
     font-size: 18px;
 }
-h1 {
-    font-size: 36px;
+
+h1{
+    font-size:  36px;
     text-decoration: underline;
     text-underline-offset: 8px;
 }
-#email-login {
+
+
+#email-login{
     font-size: 30px;
     border-radius: 30px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
     text-align: center;
     margin: 20px;
     max-width: 100%;
 }
-#password-login {
+
+#password-login{
     font-size: 30px;
     border-radius: 30px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
     text-align: center;
     margin: 20px;
     max-width: 100%;
 }
-#login-submit {
+
+#login-submit{
     font-size: 24px;
     border-radius: 15px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
     text-align: center;
     margin: 20px;
     max-width: 100%;
 }
+
 .login-container {
     margin: auto;
     width: 50%;
     max-width: 100%;
 }
-#name-signup {
+.signup-container {
+    margin: auto;
+    width: 50%;
+    max-width: 100%;
+}
+
+
+#name-signup{    
     font-size: 30px;
     border-radius: 30px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
     text-align: center;
     margin: 20px;
     max-width: 100%;
 }
-#email-signup {
+
+#email-signup{
     font-size: 30px;
     border-radius: 30px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
     text-align: center;
     margin: 20px;
     max-width: 100%;
 }
-#password-signup {
+
+#password-signup{
     font-size: 30px;
     border-radius: 30px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
     text-align: center;
     margin: 20px;
     max-width: 100%;
 }
-#signup-submit {
+
+#signup-submit{
     font-size: 24px;
     border-radius: 15px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
     text-align: center;
     margin: 20px;
     max-width: 100%;
