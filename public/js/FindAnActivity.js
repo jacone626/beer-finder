@@ -1,3 +1,4 @@
+const selectedActivities = [];
 document.addEventListener("DOMContentLoaded", function () {
   const activities = [
     {
@@ -49,16 +50,26 @@ document.addEventListener("DOMContentLoaded", function () {
       "name": "Scuba diving"
     }
   ];
+  
+  // Retrieve the existing values from local storage
+  const storedActivities = JSON.parse(localStorage.getItem("selectedActivities")) || [];
 
   const randomActivities = activities.sort(() => 0.5 - Math.random()).slice(0, 5);
-  
+
   console.log(randomActivities); // Log the randomActivities array
-  // Generate buttons for each activity
   randomActivities.forEach(activity => {
     const button = document.createElement("button");
     button.classList.add("button", "is-rounded", "is-primary");
     button.textContent = activity.name;
     button.addEventListener("click", () => {
+      // Add the selected activity to the array
+      storedActivities.push({
+        name: activity.name,
+        id: activity.id
+      });
+      // Set the updated array in local storage
+      localStorage.setItem("selectedActivities", JSON.stringify(storedActivities));
+      // Redirect the user to a new page
       window.location.replace(`activity/${activity.id}`);
     });
     document.getElementById("RandomButtons").appendChild(button);
@@ -88,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   var button = document.getElementById("Find an Activity");
 
   button.addEventListener("click", function () {
-      document.location.href = window.location.origin + '/FindAnActivity';
+    document.location.href = window.location.origin + '/FindAnActivity';
   });
 })
 
