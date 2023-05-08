@@ -3,7 +3,7 @@ const { User, Pairing, Activity, Review, CannabisIndex } = require('../models');
 const withAuth = require('../utils/auth');
 
 
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
     try {
       const reviewData = await Review.findAll({
         include: [{ 
@@ -25,7 +25,7 @@ router.get('/', async (req, res) => {
 // Pass serialized data and session flag into template
   res.render('homepage', {
       reviews, 
-      // logged_in: req.session.logged_in 
+      logged_in: req.session.logged_in 
     });
   } catch (err) {
     res.status(500).json(err);
@@ -56,7 +56,7 @@ router.get('/logout'), (req, res) => {
 module.exports = router;
 
 
-router.get('/strains', async (req, res) => {
+router.get('/strains', withAuth, async (req, res) => {
   // try {
   //   const cannabisData = await CannabisIndex.findAll({
   //     where: { strain: req.params.strainName}
@@ -77,7 +77,7 @@ router.get('/strains', async (req, res) => {
  });
 
 
-router.get('/strain/:strainName', async (req, res) => {
+router.get('/strain/:strainName', withAuth, async (req, res) => {
   try {
     const cannabisData = await CannabisIndex.findAll({
       where: { strain: req.params.strainName}
@@ -92,7 +92,8 @@ router.get('/strain/:strainName', async (req, res) => {
     console.log(cannabisSerialize)
     res.render("findStrain", {
     cannabisSerialize,
-    strainName: req.params.strainName  
+    strainName: req.params.strainName,
+    logged_in: req.session.logged_in  
     });
   } catch (err) {
     console.log(err)
@@ -101,7 +102,7 @@ router.get('/strain/:strainName', async (req, res) => {
  });
 
 //Get Activity-Weed Pairings
- router.get('/activity/:id', async (req, res) => {
+ router.get('/activity/:id', withAuth, async (req, res) => {
   try {
     const activityData = await Activity.findByPk(req.params.id, {
       include: [{ model: CannabisIndex}]
@@ -118,6 +119,6 @@ router.get('/strain/:strainName', async (req, res) => {
 }
 });
 
-router.get('/FindAnActivity', async (req, res) => {
+router.get('/FindAnActivity', withAuth, async (req, res) => {
   res.render("FindAnActivity");
 });
