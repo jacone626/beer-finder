@@ -54,11 +54,11 @@
         {{!-- Future dev Idea --}}
         <p id="MostRecentReview">Most recent review</p>
         {{!-- Future dev Idea --}}
-        <form class="mb-3" id="new-review-form">
-           <input type="hidden" name="activityName" value="{{activity.name}}">
-           <input type="hidden" name="cannabisName" value="{{name}}">
-           <input type="hidden" name="cannabisImage" value="{{image}}">
-            <input type="hidden" name="cannabisStrain" value="{{strain}}">
+        <form class="mb-3 new-review-form">
+           <input type="hidden" name="activityName" id= "activityName" value="{{../activity.name}}">
+           <input type="hidden" name="cannabisName" id="cannabisName" value="{{name}}">
+           <input type="hidden" name="cannabisImage" id="cannabisImage" value="{{image}}">
+           <input type="hidden" name="cannabisStrain" id="cannabisStrain" value="{{strain}}">
           <div class="field has-addons is-centered is-flex is-justify-content-center">
             <div class="control">
               <input class="input is-rounded" type="text" id="new-review" placeholder="Add a Review">
@@ -67,7 +67,7 @@
               <input class="input is-rounded" type="text" id= "new-star-rating" placeholder="Add a Rating (1-5)">
             </div>
             <div class="control">
-              <button type="submit" class="button is-info is-primary is-rounded">
+              <button type="submit" data-index= "{{pairing.id}}"class="button is-info is-primary is-rounded" id="submit-button">
                 Submit
               </button>
             </div>
@@ -78,7 +78,5 @@
   </div>
   {{/each}}
 </div>
-
-<p id="MostRecent">Most recent rev</p>
 
 <script src="/js/activity.js"></script>

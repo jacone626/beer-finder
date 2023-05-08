@@ -2,30 +2,50 @@
   {
     "content": "I enjoyed this pairing.",
     "emoji_starRating": 4.0,
+    "image": "assets/HogplumsHazeNo30_Hybrid.jpg",
+    "name": "Hogplums Haze #30",
+    "strain": "Hybrid",
+    "activity": "Playing guitar",
     "pairing_id": 2,
     "user_id": 1
   },
   {
     "content": "I did not enjoy this pairing.",
     "emoji_starRating": 2.0,
+    "image": "assets/KaliburstNo31_HYBRID.jpeg",
+    "name": "Kaliburst #31",
+    "strain": "Hybrid",
+    "activity": "Playing guitar",
     "pairing_id": 3,
     "user_id": 2
   },
   {
     "content": "I do not recommend smoking this with your parents.",
     "emoji_starRating": 1.0,
+    "image": "assets/LondynLeiNo4_HYBRID.png",
+    "name": "Londyn Lei #4",
+    "strain": "Hybrid",
+    "activity": "Volunteering",
     "pairing_id": 14,
     "user_id": 1
   },
   {
     "content": "I took great pictures and it helped me focus on finer details!",
     "emoji_starRating": 4.0,
+    "image":  "assets/Scarlet-NovaNo33_HYBRID.jpeg",
+    "name": "Scarlet-Nova #33",
+    "strain": "Hybrid",
+    "activity": "Photography",
     "pairing_id": 24,
     "user_id": 2
   },
   {
     "content": "I did not catch any fish and I'm blaming this strain.",
     "emoji_starRating": 1.0,
+    "image": "assets/OrangeSliceNebulaNo41_HYBRID.jpeg",
+    "name": "Orange Slice Nebula #41",
+    "strain": "Hybrid",
+    "activity": "Surf fishing",
     "pairing_id": 37,
     "user_id": 3
   }
