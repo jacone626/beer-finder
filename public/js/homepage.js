@@ -97,4 +97,4 @@ for (let i = 0; i < ratingElements.length; i++) {
   const stars = "⭐".repeat(starCount);
   ratingElement.textContent += stars;
   ratingElement.textContent = ratingElement.textContent.replace(/\d+/g, "");
-}
+
