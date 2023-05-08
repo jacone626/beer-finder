@@ -4,7 +4,6 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <link rel="stylesheet" href="/css/homepage.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="/js/homepage.js"></script>
 </head>
 
 
@@ -56,7 +55,7 @@
         <p id="Reviewer">User: {{user.name}}</p>
         <p id="Activity">Activity: {{activity}}</p>
         <p id="Strain">Strain: {{strain}}</p>
-        <p id="Rating">Rating: {{emoji_starRating}} stars</p>
+        <p id="Rating">Rating: {{emoji_starRating}}⭐</p>
         <p id="Review">Review: {{content}}</p>
       </div>
     </div>
@@ -65,15 +64,15 @@
 </div>
 
 
- <h1 class="has-text-centered">My User Activities</h1>
+<h1 class="has-text-centered">My User Activities</h1>
 <div class="columns is-centered" id="UserActivitiesContainer">
   <div class="column is-half">
-    <div class="card">
-      <div class="card-content has-text-centered">
+    <div class="user-activities-card">
+      <div class="card-content has-text-centered" id="selected-activities">
       </div>
     </div>
   </div>
 </div>
-</body>
+
 
 <script src="/js/homepage.js"></script>
