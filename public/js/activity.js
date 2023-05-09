@@ -76,49 +76,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 })
 
 
-// //Create new review
-// const newReviewHandler = async (event) => {
-//   event.preventDefault();
-
-//   const content = document.querySelector('#new-review').value.trim();
-//   const emoji_starRating = document.querySelector('#new-star-rating').value.trim();
-//   const image = document.querySelector('#cannabisImage').value
-//   const name = document.querySelector('#cannabisName').value
-//   const strain = document.querySelector("#cannabisStrain").value
-//   const activity = document.querySelector('#activityName').value
-
-//   if (content && emoji_starRating ) {
-//     const response = await fetch('/api/reviews', {
-//       method: 'POST',
-//       body: JSON.stringify({ content, emoji_starRating, image, name, strain, activity}),
-//       headers: { 'Content-Type': 'application/json' },
-//     });
-
-//     if (response.ok) {
-//       document.location.replace('/'); 
-//     } else {
-//       alert('Failed to create a new review.'); 
-//     }
-//   }
-// };
-
-// document.addEventListener("DOMContentLoaded", function (event) {
-
-//   var button = document.getElementById("new-review-form");
-
-//   button.addEventListener("submit", newReviewHandler);
-// })
-
-// const deletePostHandler = (event) => {
-//   if (event.target.matches("#submit-button")) {
-//     const post_id = event.target.getAttribute("data-index");
-//     deletePost(post_id);
-//   }
-// };
-
-// document.addEventListener("click", deletePostHandler);
-
-
 const buttons = document.querySelectorAll(".new-review-form");
 
 buttons.forEach((button) => {
