@@ -25,15 +25,27 @@ h1{
     font-size:  36px;
     text-decoration: underline;
     text-underline-offset: 8px;
+    margin-bottom: 20px;
 }
 .columns{
     margin-left: 0;
+}
+
+#mission-statement{
+    margin-bottom: 10px;
+}
+#mission-statement-div{
+padding: 0.75 rem;
+}
+#mission-statement-content{
+    font-size: 20px;
 }
 
 #ReviewsContainer{
     max-width: 100%;
 }
 #cannabis-card{
+   margin-bottom: 10px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
@@ -83,3 +95,7 @@ border-style: solid;
   #UserActivitiesContainer{
     max-width: 100%;
   }
+.user-activities-card{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+margin-top: 20px;
+}
