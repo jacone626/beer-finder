@@ -17,6 +17,7 @@ h1{
     font-size:  36px;
     text-decoration: underline;
     text-underline-offset: 8px;
+    margin-bottom: 20px;
 }
 
 #CannabisName{
@@ -37,5 +38,6 @@ h1{
 #CannabisImage{
 border-style: solid;
 margin-bottom: 3rem;
+margin-top: 3rem;
 }
 

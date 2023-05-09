@@ -13,6 +13,9 @@
 #homepageTitle{
     font-size: 80px;
 }
+.columns{
+    margin-left: 0;
+}
 
 #dropdown{
     position: absolute;
@@ -33,7 +36,21 @@ h1{
 #cannabis-card{
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
+#CannabisImage{
+border-style: solid;
+}
+#CannabisName{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+#CannabisDescription{
+    font-size: 20px;
+    margin-top: 30px;
+}
+
 
 h2{
-    margin-top: 30px;
+    margin-top: 15px;
+    font-size: 24px;
 }

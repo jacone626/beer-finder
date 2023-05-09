@@ -5,7 +5,6 @@
     <link rel="stylesheet" href="/css/findStrain.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="/js/strainSet.js"></script>
-    <script src="/js/helpers.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
 </head>
 
@@ -52,8 +51,8 @@
         <div class="card" id="cannabis-card">
             <div class="card-content has-text-centered">
                 <img src="/{{this.image}}" alt="image of {{this.name}}" id="CannabisImage" />
-                <h2>{{this.name}}</h2>
-                <h2>{{this.description}}</h2>
+                <p id="CannabisName">{{this.name}}</p>
+                <p id="CannabisDescription">{{this.description}}</p>
             </div>
         </div>
     </div>
@@ -62,4 +61,4 @@
 
 
 
-<script src="/js/strainSet.js"></script>
+<script src="/js/strainSet.js"></>
