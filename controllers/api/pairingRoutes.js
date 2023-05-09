@@ -1,7 +1,6 @@
-//get route, get by id route, and create route
 const router = require('express').Router();
 const { Pairing, Review, User, Activity, CannabisIndex} = require('../../models');
-// const withAuth = require("../../utils/auth");
+
 
 
 //Get
