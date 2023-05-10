@@ -1,4 +1,4 @@
-# Find My Weed
+# Strain Finder
 
 Find My Weed is a web app that uses a database to store different strains of weed and connects them to activites that the strain is good for. You have the option to choose an activity and be shown a list of strains that are recommended for said activity. You also have the option of reviewing the strain with 1-5 stars and commenting on your review. The user is able to log in and see the last activity they accessed as well as view all the strains based on their type (indica, sativa, hybrid).
 
@@ -84,6 +84,8 @@ https://strain-finder-app.herokuapp.com/
 
 ## Credits/Technology Used
 
+
+
 -Nodemon (npm)
 
 
@@ -100,3 +102,6 @@ https://strain-finder-app.herokuapp.com/
 
 
 -Sequelize
+
+
+All images and Cannabis Strain names were sourced from https://www.primewellnesspa.com/ and were used under fair use for education purposes. For removal or contacting regarding the site reach out to aaron.witthohn@gmail.com.
