@@ -1,33 +1,28 @@
-
-// // get search bar element
-// const searchInput = document.getElementById("searchInput");
-
-// // store name elements in array-like object
-// const namesFromDOM = document.getElementsByClassName("name");
-
-// // listen for user events
-// searchInput.addEventListener("keyup", (event) => {
-//     const { value } = event.target;
-
-//     // get user search input converted to lowercase
-//     const searchQuery = value.toLowerCase();
-
-//     for (const nameElement of namesFromDOM) {
-//         // store name text and convert to lowercase
-//         let name = nameElement.textContent.toLowerCase();
-
-//         // compare current name to search input
-//         if (name.includes(searchQuery)) {
-//             // found name matching search, display it
-//             nameElement.style.display = "block";
-//         } else {
-//             // no match, don't display name
-//             nameElement.style.display = "none";
-//         }
-//     }
-// });
+$(window).on("load", function () {
+    // Find the largest card height and width
+    var largestHeight = 0;
+    var largestWidth = 0;
+    $(".card").each(function () {
+      var cardHeight = $(this).height();
+      var cardWidth = $(this).width();
+      console.log("Card height: " + cardHeight);
+      console.log("Card width: " + cardWidth);
+      if (cardHeight > largestHeight) {
+        largestHeight = cardHeight;
+      }
+      if (cardWidth > largestWidth) {
+        largestWidth = cardWidth;
+      }
+    });
+    console.log("Largest height: " + largestHeight);
+    console.log("Largest width: " + largestWidth);
+  
+    // Set the height and width of all the cards to match the largest card
+    $(".card").height(largestHeight);
+    $(".card").width(largestWidth);
 
 
+  });
 
 
 //addEventListener for Strain types

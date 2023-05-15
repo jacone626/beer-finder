@@ -55,6 +55,28 @@ selectedActivities.forEach(activity => {
   }
 });
 
+const DisplayActivities = document.getElementById("selected-activities");
+
+// Check if there are any child elements
+if (DisplayActivities.children.length > 0) {
+  // If there are child elements, remove the is-hidden class from UserActivitiesContainer
+  const userActivitiesContainer = document.getElementById("UserActivitiesContainer");
+  userActivitiesContainer.classList.remove("is-hidden");
+} else {
+  // If there are no child elements, add the is-hidden class to UserActivitiesContainer
+  const userActivitiesContainer = document.getElementById("UserActivitiesContainer");
+  userActivitiesContainer.classList.add("is-hidden");
+}
+
+
+
+
+
+
+
+
+
+
 //addEventListener for menu dropdown selections
 document.addEventListener("DOMContentLoaded", function (event) {
   var button = document.getElementById("logout");

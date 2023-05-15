@@ -175,7 +175,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   var button = document.getElementById("Find an Activity");
 
   button.addEventListener("click", function () {
-      document.location.href = window.location.origin + '/FindAnActivity';
+    document.location.href = window.location.origin + '/FindAnActivity';
   });
 })
 
@@ -196,3 +196,16 @@ document
 document
   .querySelector('.signup-form')
   .addEventListener('submit', signupFormHandler);
+
+
+$(document).ready(function () {
+  var minAge = $('select').val();
+  $('select').on('change', function () {
+    minAge = $(this).val();
+  });
+  $('button').on('click', function () {
+    sessionStorage.clear();
+    $.ageCheck({ minAge: minAge });
+  });
+  $.ageCheck({ minAge: minAge });
+});        
