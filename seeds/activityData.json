@@ -5,19 +5,19 @@
     },
     {
       "id": 2,
-      "name": "Snowboarding"
+      "name": "Watching a movie"
     },
     {
       "id": 3,
-      "name": "Volunteering"
+      "name": "Attending a brewery"
     },
     {
       "id": 4,
-      "name": "Photography"
+      "name": "Attending a sports event"
     },
     {
       "id": 5,
-      "name": "Playing chess"
+      "name": "Playing board games"
     },
     {
       "id": 6,
@@ -29,7 +29,7 @@
     },
     {
       "id": 8,
-      "name": "Skydiving"
+      "name": "Going to the beach"
     },
     {
       "id": 9,
@@ -45,6 +45,6 @@
     },
     {
       "id": 12,
-      "name": "Scuba diving"
+      "name": "Camping"
     }
 ]

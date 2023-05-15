@@ -1,121 +1,86 @@
 [
   {
     "id": 1,
-    "name": "Chem De La Chem #5",
-    "description": "This strain is so potent, you might feel like you're in a chemistry lab. Just don't mix it with the wrong chemicals, or you might end up like the guys from Breaking Bad.",
-    "strain": "Indica",
-    "image": "assets/ChemDeLaChemNo5_INDICA.jpg"
+    "name": "Sierra Nevada Pale Ale",
+    "description": "This is a classic American pale ale that has a crisp, citrusy flavor with a slightly bitter finish. It is brewed with Cascade hops, which give it a distinct piney aroma.",
+    "strain": "Ale",
+    "image": "assets/sierra-nevada.png"
   },
   {
     "id": 2,
-    "name": "Double Afghan Chunk #24",
-    "description": "This strain is like a big, comfy blanket that wraps you up and never lets go. It's so relaxing, you'll feel like you're in the middle of a spa day with your best buds.",
-    "strain": "Indica",
-    "image":"assets/DoubleAfghanChunk24_INDICA.jpg"
+    "name": "Guiness Draught Stout",
+    "description": "This Irish stout is known for its creamy texture and rich, roasted flavor. It has a complex flavor profile with notes of coffee, dark chocolate, and caramel.",
+    "strain": "Ale",
+    "image":"assets/guinness-stout.webp"
   },
   {
     "id": 3,
-    "name": "Florthern Lights Haze #11",
-    "description": "This strain is like a magic carpet ride that takes you to a mystical land of euphoria. It's the perfect escape from reality, like a scene out of Alice in Wonderland.",
-    "strain": "Hybrid",
-    "image":"assets/FlorthernLightsHazeNo11_Hybrid.jpg"
+    "name": "Anchor Porter",
+    "description": "This is a dark, full-bodied porter with a rich, roasted flavor and a slight sweetness. It has a smooth mouthfeel with a slightly bitter finish.",
+    "strain": "Ale",
+    "image":"assets/anchor-porter.jpg"
   },
   {
     "id": 4,
-    "name": "Hogplums Haze #30",
-    "description": "This strain is so sweet, you'll swear you're tasting a ripe hogplum right off the vine. It's like candy for your taste buds, and it'll leave you feeling like a kid again.",
-    "strain": "Hybrid",
-    "image":"assets/HogplumsHazeNo30_Hybrid.jpg"
+    "name": "Blue Moon",
+    "description": "This is a Belgian-style wheat beer that is brewed with coriander and orange peel, giving it a spicy and citrusy flavor.",
+    "strain": "Ale",
+    "image":"assets/blue-moon.webp"
   },
   {
     "id": 5,
-    "name": "Kaliburst #31",
-    "description": "This strain is like a party in your mouth, with flavors that burst like fireworks on the Fourth of July. It's like a kaleidoscope of taste and sensation, just like the trippy visuals in a Pink Floyd concert.",
-    "strain": "Hybrid",
-    "image":"assets/KaliburstNo31_HYBRID.jpeg"
+    "name": "Miller Lite",
+    "description": "Miller Lite Beer is the original light beer. Smooth, light and refreshing, this American style pilsner beer has a 4.2% alcohol by volume.",
+    "strain": "Lager",
+    "image":"assets/miller-lite.png"
   },
   {
     "id": 6,
-    "name": "LA Biker #2",
-    "description": "This strain is like a ride down the Pacific Coast Highway on a Harley. It's the perfect balance of power and relaxation, just like a true biker at heart.",
-    "strain": "Indica",
-    "image":"assets/LABikerNo2_Indica.png"
+    "name": "Corona Extra",
+    "description": "Corona Extra Mexican Lager Beer is an even-keeled imported beer with aromas of fruity-honey and a touch of malt.",
+    "strain": "Lager",
+    "image":"assets/corona-extra.webp"
   },
   {
     "id": 7,
-    "name": "Legend of 91 #9",
-    "description": "This strain is like a legend in its own right, with a mystique that's hard to define. It's like the Holy Grail of cannabis, just like the fabled cup that Indiana Jones was searching for.",
-    "strain": "Indica",
-    "image":"assets/LegendOf91No9_INDICA.jpg"
+    "name": "Stella Artois",
+    "description": "Enjoy the European way with the #1 best-selling Belgian beer in the world. With its wonderful floral aroma, well-balanced malt sweetness, crisp hop bitterness and soft dry finish, Stella Artois is the perfect beer.",
+    "strain": "Lager",
+    "image":"assets/stella.jpeg"
   },
   {
     "id": 8,
-    "name": "Londyn Lei #4",
-    "description": "This strain is like a breath of fresh air, with a taste that's as refreshing as a cool breeze on a hot summer day. It's like the perfect escape from the daily grind, just like a stroll through Hyde Park in London.",
-    "strain": "Hybrid",
-    "image":"assets/LondynLeiNo4_HYBRID.png"
+    "name": "Budweiser",
+    "description": "Budweiser beer is a medium-bodied, American-style lager beer. Brewed with high quality barley malt, a blend of premium hop varieties, fresh rice and filtered water, this American beer is crisp and full of flavor.",
+    "strain": "Lager",
+    "image":"assets/budweiser.jpeg"
   },
   {
     "id": 9,
-    "name": "Londyn Lei #50",
-    "description": "This strain is like a bouquet of flowers, with a fragrance that's as delightful as a stroll through a blooming garden. It's like the perfect way to brighten up your day, just like a sunny afternoon in Notting Hill..",
-    "strain": "Hybrid",
-    "image":"assets/LondynLeiNo50_hybrid.jpg"
+    "name": "Siera Nevada Wild Little Thing",
+    "description": "Sierra Nevada has been known for decades for its iconic Sierra Nevada Pale Ale. In recent years, its Little Thing series has become very popular. Its sour version gets its fruity flavor from the addition of guava, hibiscus, and strawberry.",
+    "strain": "Sour",
+    "image":"assets/sierra-wild.jpeg"
   },
   {
     "id": 10,
-    "name": "Marie Laveau #42",
-    "description": "This strain is like a spell that enchants your mind, body, and soul. It's like the voodoo magic of the famous New Orleans queen, Marie Laveau.",
-    "strain": "Indica",
-    "image":"assets/MarieLaveauNo42.png"
+    "name": "SeaQuench Ale",
+    "description": "Dogfish Head's SeaQuench is a sour-meets-kölsch with a hint of salt. Somehow, the beer found a way to capture the feeling taste of walking on a New England area pier in the early spring.",
+    "strain": "Sour",
+    "image":"assets/seaquench.jpeg"
   },
   {
     "id": 11,
-    "name": "Orange Slice Nebula #41",
-    "description": "This strain is like a trip through the cosmos, with flavors that are out of this world. It's like a journey through the stars, just like the epic adventures in the sci-fi classic, Star Trek.",
-    "strain": "Hybrid",
-    "image":"assets/OrangeSliceNebulaNo41_HYBRID.jpeg"
+    "name": "Victory Sour Monkey",
+    "description": "This sour tripel is brewed with Pilsner malts and Tettnang hops. It gets its sour, fruity flavor from the addition of Belgian yeast. It has a tangy, tart, slightly sweet flavor.",
+    "strain": "Sour",
+    "image":"assets/sour-monkey.png"
   },
   {
     "id": 12,
-    "name": "PT Stardawg #36",
-    "description": "This strain is like a superstar, with a power that's hard to match. It's like the king of the jungle, just like the famous lions from The Lion King.",
-    "strain": "Indica",
-    "image":"assets/PTStardawgNo36_INDICA.jpg"
-  },
-  {
-    "id": 13,
-    "name": "Purple Thai #22",
-    "description": "This strain is like a mystical journey through the jungles of Thailand, with a flavor that's as exotic as the country itself. It's like the perfect escape to paradise, just like a scene from The Beach.",
-    "strain": "Sativa",
-    "image":"assets/PTStardawgNo36_INDICA.jpg"
-  },
-  {
-    "id": 14,
-    "name": "Scarlet-Nova #33",
-    "description": "This strain is like a fiery comet that streaks across the night sky, with a flavor that's as bold as its name. It's like the perfect way to light up your evening, just like a night out with the gang from That '70s Show.",
-    "strain": "Hybrid",
-    "image":"assets/Scarlet-NovaNo33_HYBRID.jpeg"
-  },
-  {
-    "id": 15,
-    "name": "Super Silver Thai #5",
-    "description": "This strain is like a superhero, with a power that's hard to match. It's like the Man of Steel himself, just like the epic battles in the DC Universe.",
-    "strain": "Sativa",
-    "image":"assets/SuperSilverThaiNo5_SATIVA.jpg"
-  },
-  {
-    "id": 16,
-    "name": "Super Silver Thai #17",
-    "description": "This strain is like a superhero, with a power that's hard to match. It's like the Man of Steel himself, just like the epic battles in the DC Universe.",
-    "strain": "Sativa",
-    "image":"assets/SuperSilverThaiNo17_SATIVA.jpeg"
-  },
-  {
-    "id": 17,
-    "name": "Urban Legend #48",
-    "description": "As the first toke is taken, a wave of tranquility washes over the body, melting away tension and stress.",
-    "strain": "Indica",
-    "image":"assets/UrbanLegendNo48_INDICA.jpg"
+    "name": "Sour Me Unicorn Farts",
+    "description": "With a name like Sour Me Unicorn Farts, you know you are in for something special. Referred to as a glittered sour ale, this beer is brewed with lime, tangerines, and cherries.",
+    "strain": "Sour",
+    "image":"assets/unicorn.jpeg"
   }
 ]
