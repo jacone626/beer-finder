@@ -1,6 +1,6 @@
-# Strain Finder
+# Beer Finder
 
-Find My Weed is a web app that uses a database to store different strains of weed and connects them to activites that the strain is good for. You have the option to choose an activity and be shown a list of strains that are recommended for said activity. You also have the option of reviewing the strain with 1-5 stars and commenting on your review. The user is able to log in and see the last activity they accessed as well as view all the strains based on their type (indica, sativa, hybrid).
+Beer Finder is a web app that uses a database to store different types of beer and connects them to activites that correlate to the strain of beer. You have the option to choose an activity and be shown a list of beers that are recommended for said activity. You also have the option of seeing and writing reviews on a specific beer/activity pairing. 
 
 ## Table of Contents
 
@@ -9,17 +9,18 @@ Find My Weed is a web app that uses a database to store different strains of wee
 - [DeploymentURL](#deploymentURL)
 - [Usage](#usage)
 - [Credits](#credits)
+- [License](#license)
 
 
 ## User Story
 
-As someone interested in weed
+As someone interested in beer
 
 
-I want to be able to look up specific strains
+I want to be able to look up specific types of beer
 
 
-So that I can see descriptions for different types under each strain
+So that I can see descriptions for different types under each type of beer
 
 
 ## Acceptance Criteria
@@ -30,60 +31,56 @@ GIVEN I log in
 WHEN I choose an activity
 
 
-THEN I am given a list of strains compatible with the acitivity i choose
+THEN I am given a list of beers compatible with the acitivity I choose
 
 ## Installation
 
-Go to deployed heroku link 
+Go to deployed heroku link and sign up. 
 
 ## DeploymentURL
 
-https://strain-finder-app.herokuapp.com/
+https://beer-finder-jacone626-f687f9bda2d5.herokuapp.com/
 
 ## Usage
--Login Page
+
+This application has a simple userface, but requires an agecheck and login to actually use the application. The below images show the different pages and functionality of the application.
+
+
+-Login Page with an age check
 <img src='.\public\assets\login.png'>
 
 
--Homepage
+-Homepage that lists the 5 most recent reviews
 <img src='.\public\assets\homepage.png'>
 
 
--Activities List
+-Activities list that is randomized each time you click on activities
 <img src='.\public\assets\activities.png'>
 
 
--Strains Page
-<img src='.\public\assets\strains.png'>
+-Activity Pairings page that shows up when you select an activity. You can then leave a review and rating on a specific beer/activity pairing.
+<img src='.\public\assets\beer-review.png'>
 
 
--Strain List
-<img src='.\public\assets\strainslist.png'>
+-Types of beer page that is found under "Explore a Strain" tab
+<img src='.\public\assets\beer-types.png'>
+
+
+-View of the different types of beers that fall under Lagers
+<img src='.\public\assets\lager-types.png'>
 
 ## Wireframe
 
--Login Page
-<img src='.\public\assets\wflogin.png'>
-
-
--Homepage
-<img src='.\public\assets\wfhomepage.png'>
-
+Our initial idea and wireframe changed slightly over the course of the project, but the below images show a few sketches of our vision. 
 
 -Activities List
 <img src='.\public\assets\wfactivity.png'>
-
-
--Strains Page
-<img src='.\public\assets\wfstrains.png'>
-
 
 -User Profile
 <img src='.\public\assets\wfprofile.png'>
 
 
 ## Credits/Technology Used
-
 
 
 -Nodemon (npm)
@@ -104,4 +101,5 @@ https://strain-finder-app.herokuapp.com/
 -Sequelize
 
 
-All images and Cannabis Strain names were sourced from https://www.primewellnesspa.com/ and were used under fair use for education purposes. For removal or contacting regarding the site reach out to aaron.witthohn@gmail.com.
+## License
+Please refer to the license in the repo.
