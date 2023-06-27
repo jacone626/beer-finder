@@ -36,7 +36,7 @@ h1 {
     margin-bottom: 10px;
 }
 
-#CannabisImage {
+#beerImage {
     border-style: solid;
 }
 
@@ -47,25 +47,26 @@ a:visited {
     color: black; /* Change the color to black */
   }
 
-#CannabisImage:hover {
+#beerImage:hover {
     border-color: #00c4a7;
   }
 
 #StrainCard {
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    height: 850px;
 }
 #strainsContainer{
     max-width: 100%;
     margin-top: 15px;
 }
 
-#sativa-btn, #hybrid-btn, #indica-btn {
+#sour-btn, #lager-btn, #ale-btn {
   position: absolute;
   bottom: 5px;
   left: 50%;
   transform: translateX(-50%);
 }
-#Cannabis-effect{
+#beer-effect{
 font-size: 20px;
 margin-top: 5px;
 margin-bottom: 35px;

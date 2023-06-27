@@ -1,29 +1,29 @@
 const router = require('express').Router();
-const { CannabisIndex, Pairing, Activity } = require('../../models');
+const { BeerIndex, Pairing, Activity } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-//Get all cannabis data
+//Get all beer data
 router.get('/', async (req, res) => {
     try {
-      const cannabisData = await CannabisIndex.findAll({
+      const beerData = await BeerIndex.findAll({
       });
-      res.status(200).json(cannabisData);
+      res.status(200).json(beerData);
     } catch (err) {
       res.status(500).json(err);
     }
   });
 
-//Get cannabis by id
+//Get beer by id
 router.get("/:id", async (req, res) => {
     try {
-      const cannabisData = await CannabisIndex.findByPk(req.params.id, {
+      const beerData = await BeerIndex.findByPk(req.params.id, {
         include: [{ model: Activity, through: Pairing}],
       });
-      if (!cannabisData) {
-        res.status(404).json({ message: "No cannabis found with that id!" });
+      if (!beerData) {
+        res.status(404).json({ message: "No beer found with that id!" });
         return;
       }
-      res.status(200).json(cannabisData);
+      res.status(200).json(beerData);
     } catch (err) {
       res.status(500).json(err);
     }
@@ -32,24 +32,24 @@ router.get("/:id", async (req, res) => {
 //get by strain
 router.get("/strain/:strainName", async (req, res) => {
   try {
-    const cannabisData = await CannabisIndex.findAll({
+    const beerData = await BeerIndex.findAll({
       where: { strain: req.params.strainName}
     });
-    if (!cannabisData) {
-      res.status(404).json({ message: "No cannabis found with that strain" });
+    if (!beerData) {
+      res.status(404).json({ message: "No beer found with that strain" });
       return;
     }
-    res.status(200).json(cannabisData);
+    res.status(200).json(beerData);
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
 
-//Add a cannabis (Future Dev)
+//Add a beer (Future Dev)
 router.post("/", withAuth, async (req, res) => {
   try {    
-    const review = await CannabisIndex.create({
+    const review = await BeerIndex.create({
       name: req.body.name,
       description: req.body.description,
       strain: req.body.strain,

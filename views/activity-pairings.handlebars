@@ -13,7 +13,7 @@
 <header>
   <section class="hero is-success ">
     <div class="hero-body">
-      <p class="title has-text-centered " id="homepageTitle">Strain Finder</p>
+      <p class="title has-text-centered " id="homepageTitle">Beer Finder</p>
 
 
 
@@ -45,20 +45,20 @@
 
 <h1 class="has-text-centered">{{activity.name}}</h1>
 <div class="columns is-multiline is-flex-wrap-wrap is-justify-content-center">
-  {{#each activity.cannabisIndices}}
+  {{#each activity.beerIndices}}
   <div class="column is-one-third-desktop is-half-tablet">
     <div class="card" id="activity-card">
       <div class="card-content has-text-centered">
-        <img src="/{{image}}" width="400" height="300" alt="{{description}}" id="CannabisImage">
-        <p id="CannabisName">{{name}}</p>
+        <img src="/{{image}}" width="400" height="300" alt="{{description}}" id="mainBeerImage">
+        <p id="mainBeerName">{{name}}</p>
         {{!-- Future dev Idea --}}
         <p id="MostRecentReview"></p>
         {{!-- Future dev Idea --}}
         <form class="mb-3 new-review-form">
            <input type="hidden" name="activityName" id= "activityName" value="{{../activity.name}}">
-           <input type="hidden" name="cannabisName" id="cannabisName" value="{{name}}">
-           <input type="hidden" name="cannabisImage" id="cannabisImage" value="{{image}}">
-           <input type="hidden" name="cannabisStrain" id="cannabisStrain" value="{{strain}}">
+           <input type="hidden" name="beerName" id="beerName" value="{{name}}">
+           <input type="hidden" name="beerImage" id="beerImage" value="{{image}}">
+           <input type="hidden" name="beerStrain" id="beerStrain" value="{{strain}}">
           <div class="field has-addons is-centered is-flex is-justify-content-center">
             <div class="control">
               <input class="input is-rounded" type="text" id="new-review" placeholder="Add a Review">

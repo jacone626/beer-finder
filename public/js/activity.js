@@ -83,9 +83,9 @@ buttons.forEach((button) => {
     event.preventDefault();
     const content = button.querySelector("#new-review").value.trim();
     const emoji_starRating = button.querySelector("#new-star-rating").value.trim();
-    const image = button.querySelector("#cannabisImage").value;
-    const name = button.querySelector("#cannabisName").value;
-    const strain = button.querySelector("#cannabisStrain").value;
+    const image = button.querySelector("#beerImage").value;
+    const name = button.querySelector("#beerName").value;
+    const strain = button.querySelector("#beerStrain").value;
     const activity = button.querySelector("#activityName").value;
 
     if (content && emoji_starRating) {

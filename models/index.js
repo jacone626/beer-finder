@@ -1,5 +1,5 @@
 const User = require('./User');
-const CannabisIndex = require('./cannabisIndex');
+const BeerIndex = require('./beerIndex');
 const Activity = require('./activity');
 const Pairing = require('./pairing');
 const Review =require('./reviews')
@@ -21,14 +21,14 @@ Review.belongsTo(Pairing, {
   foreignKey: 'pairing_id'
  });
 
-CannabisIndex.belongsToMany(Activity, {
+BeerIndex.belongsToMany(Activity, {
   through: {
     model: Pairing, 
-    foreignKey: 'cannabisIndex_id',
+    foreignKey: 'beerIndex_id',
     unique: true}
 });
 
-Activity.belongsToMany(CannabisIndex, {
+Activity.belongsToMany(BeerIndex, {
   through: {
     model: Pairing, 
     foreignKey: 'activity_id',
@@ -43,13 +43,13 @@ Pairing.belongsTo(Activity, {
   foreignKey: 'activity_id'
 })
 
-CannabisIndex.hasOne(Pairing, {
-  foreignKey: 'cannabisIndex_id'
+BeerIndex.hasOne(Pairing, {
+  foreignKey: 'beerIndex_id'
 });
 
-Pairing.belongsTo(CannabisIndex, {
-  foreignKey: 'cannabisIndex_id'
+Pairing.belongsTo(BeerIndex, {
+  foreignKey: 'beerIndex_id'
 })
 
 
-module.exports = { User, CannabisIndex, Activity, Pairing, Review };
+module.exports = { User, BeerIndex, Activity, Pairing, Review };

@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Pairing, Activity, Review, CannabisIndex } = require('../models');
+const { User, Pairing, Activity, Review, BeerIndex } = require('../models');
 const withAuth = require('../utils/auth');
 
 
@@ -14,7 +14,7 @@ router.get('/', withAuth, async (req, res) => {
           {model: Pairing,
             include: [  
             {model: Activity},
-            {model: CannabisIndex}
+            {model: BeerIndex}
             ]
             }
         ]
@@ -66,19 +66,19 @@ router.get('/strains', withAuth, async (req, res) => {
 
 router.get('/strain/:strainName', withAuth, async (req, res) => {
   try {
-    const cannabisData = await CannabisIndex.findAll({
+    const beerData = await BeerIndex.findAll({
       where: { strain: req.params.strainName}
     });
-    if (!cannabisData) {
-      res.status(404).json({ message: "No cannabis found with that strain" });
+    if (!beerData) {
+      res.status(404).json({ message: "No beer found with that strain" });
       return;
     }
 
 
-    const cannabisSerialize = cannabisData.map((weed) => weed.get({ plain: true }));
-    console.log(cannabisSerialize)
+    const beerSerialize = beerData.map((beer) => beer.get({ plain: true }));
+    console.log(beerSerialize)
     res.render("findStrain", {
-    cannabisSerialize,
+    beerSerialize,
     strainName: req.params.strainName,
     logged_in: req.session.logged_in  
     });
@@ -88,11 +88,11 @@ router.get('/strain/:strainName', withAuth, async (req, res) => {
   }
  });
 
-//Get Activity-Weed Pairings
+//Get Activity-Beer Pairings
  router.get('/activity/:id', withAuth, async (req, res) => {
   try {
     const activityData = await Activity.findByPk(req.params.id, {
-      include: [{ model: CannabisIndex}]
+      include: [{ model: BeerIndex}]
     });
   
   const activity = activityData.get({ plain: true });

@@ -18,10 +18,10 @@ Pairing.init(
           key: 'id',
         },
       },
-    cannabisIndex_id: {
+    beerIndex_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'cannabisIndex',
+        model: 'beerIndex',
         key: 'id',
       },
     },

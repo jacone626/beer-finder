@@ -1,10 +1,10 @@
 const sequelize = require('../config/connection');
-const { User, Activity, CannabisIndex, Review, Pairing } = require('../models');
+const { User, Activity, BeerIndex, Review, Pairing } = require('../models');
 const userData = require('./userData.json');
 const activityData = require('./activityData.json');
 const reviewsData= require('./reviews.json')
 const pairingData = require('./pairingData.json')
-const cannabisData = require('./cannabisIndexData.json')
+const beerData = require('./beerData.json')
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
@@ -13,7 +13,7 @@ const seedDatabase = async () => {
     individualHooks: true,
   });
 
-  await CannabisIndex.bulkCreate(cannabisData);
+  await BeerIndex.bulkCreate(beerData);
 
   await Activity.bulkCreate(activityData);
 

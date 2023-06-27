@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Pairing, Review, User, Activity, CannabisIndex} = require('../../models');
+const { Pairing, Review, User, Activity, BeerIndex} = require('../../models');
 
 
 

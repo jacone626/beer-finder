@@ -4,14 +4,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="/css/findStrain.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="/js/strainSet.js"></script>
+    <script src="/js/beerSet.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
 </head>
 
 <header>
     <section class="hero is-success ">
         <div class="hero-body">
-            <h1 class="title has-text-centered " id="homepageTitle">Strain Finder</h1>
+            <h1 class="title has-text-centered " id="homepageTitle">Beer Finder</h1>
 
 
 
@@ -46,13 +46,13 @@
 <h1 class="has-text-centered">{{strainName}}s</h1>
 
 <div class="columns is-multiline is-flex-wrap-wrap is-justify-content-center" id="ReviewsContainer">
-    {{#each cannabisSerialize}}
+    {{#each beerSerialize}}
     <div class="column is-one-third-desktop is-half-tablet">
-        <div class="card" id="cannabis-card">
+        <div class="card" id="beer-card">
             <div class="card-content has-text-centered">
-                <img src="/{{this.image}}" alt="image of {{this.name}}" id="CannabisImage" />
-                <p id="CannabisName">{{this.name}}</p>
-                <p id="CannabisDescription">{{this.description}}</p>
+                <img src="/{{this.image}}" alt="image of {{this.name}}" id="beerImage" />
+                <p id="beerName">{{this.name}}</p>
+                <p id="beerDescription">{{this.description}}</p>
             </div>
         </div>
     </div>
@@ -61,4 +61,4 @@
 
 
 
-<script src="/js/strainSet.js"></>
+<script src="/js/beerSet.js"></>

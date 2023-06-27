@@ -1,6 +1,6 @@
 //get route, get by id route, and create route
 const router = require('express').Router();
-const { Activity, Pairing, CannabisIndex } = require('../../models');
+const { Activity, Pairing, BeerIndex } = require('../../models');
 const withAuth = require("../../utils/auth");
 
   
@@ -19,7 +19,7 @@ router.get("/", async (req, res) => {
 router.get("/:id", async (req, res) => {
     try {
       const activityData = await Activity.findByPk(req.params.id, {
-        include: [{ model: CannabisIndex}],
+        include: [{ model: BeerIndex}],
       });
       if (!activityData) {
         res.status(404).json({ message: "No activity found with that id!" });

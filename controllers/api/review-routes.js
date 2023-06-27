@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Review, User, Pairing, Activity, CannabisIndex } = require('../../models');
+const { Review, User, Pairing, Activity, BeerIndex } = require('../../models');
 const withAuth = require("../../utils/auth");
 
 //Add a review
@@ -31,7 +31,7 @@ router.post("/",  async (req, res) => {
             {model: Pairing,
               include: [  
               {model: Activity},
-              {model: CannabisIndex}
+              {model: BeerIndex}
               ]
               }
           ]
@@ -52,7 +52,7 @@ router.get("/:id", async (req, res) => {
         {model: Pairing,
           include: [  
           {model: Activity},
-          {model: CannabisIndex}
+          {model: BeerIndex}
           ]
           }
       ]

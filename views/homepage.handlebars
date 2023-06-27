@@ -12,7 +12,7 @@
 <header>
   <section class="hero is-success ">
     <div class="hero-body">
-      <h1 class="title has-text-centered " id="homepageTitle">Strain Finder</h1>
+      <h1 class="title has-text-centered " id="homepageTitle">Beer Finder</h1>
 
 
 
@@ -49,16 +49,12 @@
     <div class="column is-half">
       <div class="user-activities-card">
         <div class="card-content has-text-centered" id="mission-statement-div">
-          <p id="mission-statement-content"> Our goal at Strain Finder is connect our users with the proper type of
-            strain for
-            every activity in their life. Our focus and passion is to raise awareness around Cannabis. We hope that
-            through
-            providing continued education in types of strains and their corresponding effects that we can help cannabis
-            users have
-            a better overall experience. Strain Finder allows users to explore types of strains and add reviews. Users can also search for
+          <p id="mission-statement-content"> Our goal at Beer Finder is connect our users with the proper type of
+            beer for
+            every activity in their life. Beer Finder allows users to explore types of beer and add reviews. Users can also search for
             activities
-            and recieve recommendations of strains that pair well. All activities searched will appear back on the users
-            homepage allowing for them to add reviews later. </p>
+            and receive recommendations of beers that pair well with that activity. All activities searched will appear back on the users
+            homepage, allowing for them to add reviews later. </p>
         </div>
       </div>
     </div>
@@ -70,10 +66,10 @@
   <div class="columns is-multiline is-flex-wrap-wrap is-justify-content-center" id="ReviewsContainer">
     {{#each reviews}}
     <div class="column is-one-third-desktop is-half-tablet">
-      <div class="card" id="cannabis-card">
+      <div class="card" id="beer-card">
         <div class="card-content has-text-centered">
-          <img src="{{image}}" alt="image of cannabis" id="CannabisImage" />
-          <p id="CannabisName">{{name}}</p>
+          <img src="{{image}}" alt="image of beer" id="beerImage" />
+          <p id="beerName">{{name}}</p>
           <p id="Reviewer">User: {{user.name}}</p>
           <p id="Activity">Activity: {{activity}}</p>
           <p id="Strain">Strain: {{strain}}</p>

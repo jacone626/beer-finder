@@ -27,28 +27,28 @@ $(window).on("load", function () {
 
 //addEventListener for Strain types
 document.addEventListener("DOMContentLoaded", function (event) {
-    var button = document.getElementById("sativa-btn");
+    var button = document.getElementById("sour-btn");
     button.addEventListener("click", function () {
-        document.location.href = window.location.origin + "/strain/Sativa";
+        document.location.href = window.location.origin + "/strain/Sour";
         
     });
 })
 
 
 document.addEventListener("DOMContentLoaded", function (event) {
-    var button = document.getElementById("indica-btn");
+    var button = document.getElementById("lager-btn");
 
     button.addEventListener("click", function () {
-        document.location.href = window.location.origin + "/strain/Indica";
+        document.location.href = window.location.origin + "/strain/Lager";
     });
 })
 
 
 document.addEventListener("DOMContentLoaded", function (event) {
-    var button = document.getElementById("hybrid-btn");
+    var button = document.getElementById("ale-btn");
 
     button.addEventListener("click", function () {
-        document.location.href = window.location.origin + '/strain/Hybrid';
+        document.location.href = window.location.origin + '/strain/Ale';
     });
 })
 

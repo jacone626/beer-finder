@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class CannabisIndex extends Model { }
+class BeerIndex extends Model { }
 
-CannabisIndex.init(
+BeerIndex.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -32,9 +32,9 @@ CannabisIndex.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'cannabisIndex',
+    modelName: 'beerIndex',
   }
 );
 
-module.exports = CannabisIndex;
+module.exports = BeerIndex;
 
